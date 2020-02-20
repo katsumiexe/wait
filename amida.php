@@ -78,27 +78,26 @@ $dat_ami[8][3]=0;
   border-bottom:1vw solid #ff0000;
 }
 
-
 .amida_box{
   display:inline-block;
   position:relative;
   background:#fafafa;
 }
 
-.box_base{
+.box_base,.box_line{
   position:absolute;
   top:1vw;
   left:1vw;
-  width:95vw;
-  height:120vw;
-  background:#f0ffff;
+  width:90vw;
+  height:96vw;
 }
+
+.box_base{
+  z-index:1;
+}
+
 .box_line{
-  position:absolute;
-  top:1vw;
-  left:1vw;
-  width:95vw;
-  height:120vw;
+  z-index:2;
 }
 
 </style>
@@ -119,15 +118,9 @@ $(function(){
 </script>
 </head>
 <Body style="background:#f0e0ff;">
-
 <div class="amida_box">
-    <div class="box_base">
-      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
-    </div>
-    <div class="box_line">
-      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line2 <?if(($s+$n)%2 ==0 ){?> a_line_on3<?}?> <?if(($n) ==2){?> a_line_end2<?}?>"></div><?}?><?}?></div>
-    </div>
+    <div class="box_base"><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
+    <div class="box_line"><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line2 <?if(($s+$n)%2 ==0 ){?> a_line_on3<?}?> <?if(($n) ==2){?> a_line_end2<?}?>"></div><?}?><?}?></div>
 </div>
-
 </body>
 </html>
