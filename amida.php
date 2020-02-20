@@ -65,6 +65,18 @@ $dat_ami[7][3]=0;
 }
 
 
+.discover{
+	position:absolute;
+	bottom:22vw;
+	left:-5vw;
+	width:90vw;
+	height:60vw;
+	z-index:5;
+	background:linear-gradient(#c0e0ff,#a0c0ff);
+	box-shadow:0.5vw 0.5vw 1vw rgba(60,60,60,0.8);
+}
+
+
 .b_line{
 	display:inline-block;
 	position:absolute;
@@ -121,6 +133,8 @@ $dat_ami[7][3]=0;
 <script>
 $(function(){
 	$('.start').on('click',function(){
+		$('.discover').delay()100.animate({'height':'0vw'},500);
+/*
 		Tmp=$(this).attr('id').replace("r", "");
 
 		$.post("post_set_kiyaku.php",{
@@ -131,13 +145,18 @@ $(function(){
 			console.log(data);
 			$('.cover').fadeIn(500);
 		});
+*/
+
 	});
 /*	$('.d_line').animate({'width':'25vw'},1000);*/
+	
 });
 </script>
 </head>
 
-<Body style="background:#f0e0ff;">
+<Body style="background:#f0e0ff;text-align:center;">
+
+<div id="r1" class="start">START</div>
 <div class="amida_box">
     <div class="box_base">
     	<?for($s=0;$s<8;$s++){?>
@@ -161,6 +180,10 @@ $(function(){
 			<?}?>
 		<?}?>
     </div>
+
+<div class="discover">
+</div>
+
 </div>
 </body>
 </html>
