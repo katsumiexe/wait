@@ -48,7 +48,7 @@ $dat_ami[7][3]=0;
 .a_line{
 	display:inline-block;
 	position:absolute;
-	width:25vw;
+	width:20vw;
 	height:12vw;
 	border-left:1vw solid #909090;
 	box-sizing:border-box;
@@ -80,7 +80,7 @@ $dat_ami[7][3]=0;
 .b_line{
 	display:inline-block;
 	position:absolute;
-	width:25vw;
+	width:20vw;
 	height:0vw;
 	border-left:2vw solid #ff0000;
 	box-sizing:border-box;
@@ -123,14 +123,15 @@ $dat_ami[7][3]=0;
 	left		:0;
 	right		:0;
 	margin		:auto;
-	width		:75vw;
+	width		:70vw;
 	height		:96vw;
 }
 
 .start{
 	position:absolute;
-	width:8vw;
+	width:16vw;
 	height:8vw;
+	line-height:8vw;
 	z-index:4;
 	box-shadow:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
 	
@@ -145,17 +146,24 @@ $dat_ami[7][3]=0;
 
 #r2{
 	top:10vw;
-	left:27vw;;
+	left:22vw;;
 	background:#ffa0d0;
 
 }
 
 #r3{
 	top:10vw;
-	left:47vw;;
+	left:42vw;;
 	background:#e0f000;
 
 }
+
+#r4{
+	top:10vw;
+	left:62vw;;
+	background:#e0f000;
+}
+
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
@@ -190,26 +198,27 @@ $(function(){
 	<div id="r1" class="start">START</div>
 	<div id="r2" class="start">START</div>
 	<div id="r3" class="start">START</div>
+	<div id="r4" class="start">START</div>
 
-    <div class="box_base">
+    <div class="box_base">	
     	<?for($s=0;$s<8;$s++){?>
     		<?for($n=0;$n<3;$n++){?>
-    	 		<div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+    	 		<div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>" style="top:<?=$s*12?>vw; left:<?=$n*20?>vw;"></div>
     	 	<?}?>
     	<?}?>
 		<?for($s=0;$s<8;$s++){?>
 			<?for($n=0;$n<3;$n++){?>
-				<div class="b_line" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+				<div class="b_line" style="top:<?=$s*12?>vw; left:<?=$n*20?>vw;"></div>
 			<?}?>
 		<?}?>
 		<?for($s=0;$s<8;$s++){?>
 			<?for($n=0;$n<3;$n++){?>
-				<div class="c_line" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+				<div class="c_line" style="top:<?=$s*12?>vw; left:<?=$n*20?>vw;"></div>
 			<?}?>
 		<?}?>
 		<?for($s=0;$s<8;$s++){?>
 			<?for($n=0;$n<3;$n++){?>
-				<div class="d_line" style="top:<?=$s*12?>vw; right:<?=50-($n*25)?>vw;"></div>
+				<div class="d_line" style="top:<?=$s*12?>vw; right:<?=40-($n*20)?>vw;"></div>
 			<?}?>
 		<?}?>
     </div>
