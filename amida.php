@@ -6,7 +6,7 @@ $dat_ami[0][2]=1;
 $dat_ami[0][3]=-1;
 
 $dat_ami[1][0]=0;
-$dat_ami[1][1]=0;
+$dat_ami[1][1]=0;	
 $dat_ami[1][2]=1;
 $dat_ami[1][3]=-1;
 
@@ -46,53 +46,73 @@ $dat_ami[7][3]=0;
 <style>
 
 .a_line{
-  display:inline-block;
-  width:25vw;
-  height:12vw;
-  border-left:1vw solid #909090;
-  box-sizing:border-box;
+	display:inline-block;
+	position:absolute;
+	width:25vw;
+	height:12vw;
+	border-left:1vw solid #909090;
+	box-sizing:border-box;
+	z-index:1;
 }
 .a_line_end{
-  border-right:1vw solid #909090;
+	border-right:1vw solid #909090;
+	z-index:1;
 }
 
 .a_line_on{
-  border-bottom:1vw solid #909090;
+	border-bottom:1vw solid #909090;
+	z-index:1;
 }
 
-.a_line2{
-  display:inline-block;
-  width:25vw;
-  height:12vw;
-  box-sizing:border-box;
+
+.b_line{
+	display:inline-block;
+	position:absolute;
+	width:25vw;
+	height:0vw;
+	border-left:2vw solid #ff0000;
+	box-sizing:border-box;
+	z-index:2;
 }
 
-.a_line_on2{
-  border-bottom:2vw solid #ff0000;
+.c_line{
+	display:inline-block;
+	position:absolute;
+	width:0vw;
+	height:12vw;
+	border-bottom:2vw solid #ff0000;
+	box-sizing:border-box;
+	z-index:3;
 }
+
+.d_line{
+	display		:inline-block;
+	position	:absolute;
+	width		:0vw;
+	height		:12vw;
+	border-bottom:2vw solid #ff0000;
+	box-sizing	:border-box;
+	z-index		:4;
+}
+
 
 .amida_box{
-  display:inline-block;
-  position:relative;
-  background:#fafafa;
-}
-
-.box_base,.box_line{
-  position:absolute;
-  top:1vw;
-  left:0;
-  right:0;
-  margin:auto;
-  width:75vw;
-  height:96vw;
+	display		:inline-block;
+	position	:relative;
+	background	:#fafafa;
+	width		:80vw;
+	height		:120vw;	
+	margin		:0 auto;
 }
 
 .box_base{
-  z-index:1;
-}
-
-.box_line{
-  z-index:2;
+	position	:absolute;
+	top			:20vw;
+	left		:0;
+	right		:0;
+	margin		:auto;
+	width		:75vw;
+	height		:96vw;
 }
 
 </style>
@@ -100,22 +120,47 @@ $dat_ami[7][3]=0;
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
 $(function(){
-  $('.cover1').addClass('cover0');
-  $('.cover2').delay(500).queue(function(){
-     $(this).addClass('cover0').dequeue();
-     $('.cover3').addClass('cover3_a');
-     $('.cover1').hide();
-  });
-   setInterval(function(){
-    $('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'1px',height:'1px', opacity: 1}, 1);
-  },1000);
+	$('.start').on('click',function(){
+		Tmp=$(this).attr('id').replace("r", "");
+
+		$.post("post_set_kiyaku.php",{
+			'user_id':User_id,
+			'tmp':Tmp,
+		},
+		function(data){
+			console.log(data);
+			$('.cover').fadeIn(500);
+		});
+	});
+/*	$('.d_line').animate({'width':'25vw'},1000);*/
 });
 </script>
 </head>
+
 <Body style="background:#f0e0ff;">
 <div class="amida_box">
-    <div class="box_base"><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
-    <div class="box_line"><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line2 <?if(($s+$n)%2 ==0 ){?> a_line_on3<?}?> <?if(($n) ==2){?> a_line_end2<?}?>"></div><?}?><?}?></div>
+    <div class="box_base">
+    	<?for($s=0;$s<8;$s++){?>
+    		<?for($n=0;$n<3;$n++){?>
+    	 		<div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+    	 	<?}?>
+    	<?}?>
+		<?for($s=0;$s<8;$s++){?>
+			<?for($n=0;$n<3;$n++){?>
+				<div class="b_line" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+			<?}?>
+		<?}?>
+		<?for($s=0;$s<8;$s++){?>
+			<?for($n=0;$n<3;$n++){?>
+				<div class="c_line" style="top:<?=$s*12?>vw; left:<?=$n*25?>vw;"></div>
+			<?}?>
+		<?}?>
+		<?for($s=0;$s<8;$s++){?>
+			<?for($n=0;$n<3;$n++){?>
+				<div class="d_line" style="top:<?=$s*12?>vw; right:<?=50-($n*25)?>vw;"></div>
+			<?}?>
+		<?}?>
+    </div>
 </div>
 </body>
 </html>
