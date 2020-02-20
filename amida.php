@@ -1,3 +1,53 @@
+<?
+
+$dat_ami[0][0]=1;
+$dat_ami[0][1]=-1;
+$dat_ami[0][2]=0;
+$dat_ami[0][3]=0;
+
+$dat_ami[1][0]=0;
+$dat_ami[1][1]=0;
+$dat_ami[1][2]=1;
+$dat_ami[1][3]=-1;
+
+$dat_ami[2][0]=0;
+$dat_ami[2][1]=1;
+$dat_ami[2][2]=-1;
+$dat_ami[2][3]=0;
+
+$dat_ami[3][0]=0;
+$dat_ami[3][1]=0;
+$dat_ami[3][2]=0;
+$dat_ami[3][3]=0;
+
+$dat_ami[4][0]=1;
+$dat_ami[4][1]=-1;
+$dat_ami[4][2]=1;
+$dat_ami[4][3]=-1;
+
+$dat_ami[5][0]=1;
+$dat_ami[5][1]=-1;
+$dat_ami[5][2]=0;
+$dat_ami[5][3]=0;
+
+$dat_ami[6][0]=0;
+$dat_ami[6][1]=0;
+$dat_ami[6][2]=1;
+$dat_ami[6][3]=-1;
+
+$dat_ami[7][0]=0;
+$dat_ami[7][1]=1;
+$dat_ami[7][2]=-1;
+$dat_ami[7][3]=0;
+
+$dat_ami[8][0]=0;
+$dat_ami[8][1]=0;
+$dat_ami[8][2]=0;
+$dat_ami[8][3]=0;
+
+
+
+?>
 <html>
 <head>
 <style>
@@ -25,7 +75,7 @@
 }
 
 .a_line_on2{
-  border-bottom:0.5vw solid #ff0000;
+  border-bottom:1vw solid #ff0000;
 }
 
 
@@ -69,12 +119,13 @@ $(function(){
 </script>
 </head>
 <Body style="background:#f0e0ff;">
+
 <div class="amida_box">
     <div class="box_base">
-      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if(($s+$n)%2 ==0 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
+      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if($dat_ami[$s][$n] ==1 ){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
     </div>
     <div class="box_line">
-      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line2 <?if(($s+$n)%2 ==0 ){?> a_line_on2<?}?> <?if(($n) ==2){?> a_line_end2<?}?>"></div><?}?><?}?></div>
+      <div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line2 <?if(($s+$n)%2 ==0 ){?> a_line_on3<?}?> <?if(($n) ==2){?> a_line_end2<?}?>"></div><?}?><?}?></div>
     </div>
 </div>
 
