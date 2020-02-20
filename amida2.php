@@ -127,6 +127,35 @@ $dat_ami[7][3]=0;
 	height		:96vw;
 }
 
+.start{
+	position:absolute;
+	width:8vw;
+	height:8vw;
+	z-index:4;
+	box-shadow:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
+	
+}
+
+#r1{
+	top:10vw;
+	left:2vw;;
+	background:#903090;
+
+}
+
+#r2{
+	top:10vw;
+	left:27vw;;
+	background:#ffa0d0;
+
+}
+
+#r3{
+	top:10vw;
+	left:47vw;;
+	background:#e0f000;
+
+}
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
@@ -156,8 +185,12 @@ $(function(){
 
 <Body style="background:#f0e0ff;text-align:center;">
 
-<div id="r1" class="start">START</div>
 <div class="amida_box">
+
+	<div id="r1" class="start">START</div>
+	<div id="r2" class="start">START</div>
+	<div id="r3" class="start">START</div>
+
     <div class="box_base">
     	<?for($s=0;$s<8;$s++){?>
     		<?for($n=0;$n<3;$n++){?>
