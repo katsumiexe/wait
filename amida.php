@@ -69,7 +69,7 @@ $dat_ami[7][3]=0;
 	position:absolute;
 	bottom:22vw;
 	left:-4vw;
-	width:96vw;
+	width:92vw;
 	height:60vw;
 	z-index:5;
 	background:linear-gradient(#c0e0ff,#a0c0ff);
@@ -112,55 +112,56 @@ $dat_ami[7][3]=0;
 	display		:inline-block;
 	position	:relative;
 	background	:#fafafa;
-	width		:88vw;
-	height		:120vw;	
+	width		:84vw;
+	height		:110vw;	
 	margin		:0 auto;
 }
 
 .box_base{
 	position	:absolute;
-	top			:20vw;
+	top			:10vw;
 	left		:0;
 	right		:0;
 	margin		:auto;
-	width		:70vw;
-	height		:96vw;
+	width		:60vw;
+	height		:90vw;
 }
 
 .start{
-	position:absolute;
-	width:16vw;
-	height:8vw;
-	line-height:8vw;
-	z-index:4;
-	box-shadow:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
-	
+	position	:absolute;
+	width		:15vw;
+	height		:6vw;
+	line-height	:6vw;
+	z-index		:4;
+	box-shadow	:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
+	font-size	:3.5vw;
+	cursor		:pointer;	
 }
 
 #r1{
-	top:10vw;
-	left:2vw;;
+	top:2vw;
+	left:5vw;;
 	background:#903090;
 
 }
 
 #r2{
-	top:10vw;
-	left:22vw;;
+	top:2vw;
+	left:25vw;;
 	background:#ffa0d0;
 
 }
 
 #r3{
-	top:10vw;
-	left:42vw;;
+	top:2vw;
+	left:45vw;;
 	background:#e0f000;
 
 }
 
 #r4{
-	top:10vw;
-	left:62vw;;
+	top:2vw;
+	left:65vw;;
 	background:#e0f000;
 }
 
