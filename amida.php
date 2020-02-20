@@ -54,28 +54,28 @@ $dat_ami[8][3]=0;
 
 .a_line{
   display:inline-block;
-  width:30vw;
+  width:25vw;
   height:12vw;
-  border-left:0.5vw solid #909090;
+  border-left:1vw solid #909090;
   box-sizing:border-box;
 }
 .a_line_end{
-  border-right:0.5vw solid #909090;
+  border-right:1vw solid #909090;
 }
 
 .a_line_on{
-  border-bottom:0.5vw solid #909090;
+  border-bottom:1vw solid #909090;
 }
 
 .a_line2{
   display:inline-block;
-  width:30vw;
+  width:25vw;
   height:12vw;
   box-sizing:border-box;
 }
 
 .a_line_on2{
-  border-bottom:1vw solid #ff0000;
+  border-bottom:2vw solid #ff0000;
 }
 
 .amida_box{
@@ -87,8 +87,10 @@ $dat_ami[8][3]=0;
 .box_base,.box_line{
   position:absolute;
   top:1vw;
-  left:1vw;
-  width:90vw;
+  left:0;
+  right:0;
+  margin:auto;
+  width:75vw;
   height:96vw;
 }
 
