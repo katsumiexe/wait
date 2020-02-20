@@ -4,14 +4,17 @@
 
 .a_line{
   display:inline-block;
-  width:20vw;
+  width:30vw;
   height:12vw;
-  bordr-left:0.5vw solid #909090;
+  border-left:0.5vw solid #909090;
+  box-sizing:border-box;
+}
+.a_line_end{
   border-right:0.5vw solid #909090;
 }
+
 .a_line_on{
   border-bottom:0.5vw solid #909090;
-
 }
 
 
@@ -34,14 +37,7 @@ $(function(){
 </head>
 <Body style="background:#f0e0ff;">
 <div class="amida_box">
-
-<div>
-<?for($s=0;$s<8;$s++){?>
-  <?for($n=0;$n<4;$n++){?>
-     <div class="a_line <?if(($s+$n)%5 ==0){?> a_line_on<?}?>"></div>
-  <?}?>
-<?}?>
-</div>
+<div><?for($s=0;$s<8;$s++){?><?for($n=0;$n<3;$n++){?><div class="a_line <?if(($s+$n)%3 ==0 || ($s+$n)%7 ==0){?> a_line_on<?}?> <?if(($n) ==2){?> a_line_end<?}?>"></div><?}?><?}?></div>
 </div>
 </body>
 </html>
