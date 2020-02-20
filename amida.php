@@ -68,8 +68,8 @@ $dat_ami[7][3]=0;
 .discover{
 	position:absolute;
 	bottom:22vw;
-	left:-5vw;
-	width:90vw;
+	left:-4vw;
+	width:96vw;
 	height:60vw;
 	z-index:5;
 	background:linear-gradient(#c0e0ff,#a0c0ff);
@@ -112,7 +112,7 @@ $dat_ami[7][3]=0;
 	display		:inline-block;
 	position	:relative;
 	background	:#fafafa;
-	width		:80vw;
+	width		:88vw;
 	height		:120vw;	
 	margin		:0 auto;
 }
@@ -133,7 +133,7 @@ $dat_ami[7][3]=0;
 <script>
 $(function(){
 	$('.start').on('click',function(){
-		$('.discover').delay()100.animate({'height':'0vw'},500);
+		$('.discover').delay(100).animate({'height':'0vw'},500);
 /*
 		Tmp=$(this).attr('id').replace("r", "");
 
@@ -180,10 +180,7 @@ $(function(){
 			<?}?>
 		<?}?>
     </div>
-
-<div class="discover">
-</div>
-
+	<div class="discover"></div>
 </div>
 </body>
 </html>
