@@ -6,27 +6,27 @@ $dat_ami[0][2]=1;
 $dat_ami[0][3]=-1;
 
 $dat_ami[1][0]=0;
-$dat_ami[1][1]=0;	
-$dat_ami[1][2]=1;
-$dat_ami[1][3]=-1;
+$dat_ami[1][1]=0;
+$dat_ami[1][2]=0;
+$dat_ami[1][3]=0;
 
 $dat_ami[2][0]=0;
-$dat_ami[2][1]=1;
-$dat_ami[2][2]=-1;
+$dat_ami[2][1]=0;
+$dat_ami[2][2]=0;
 $dat_ami[2][3]=0;
 
-$dat_ami[3][0]=1;
-$dat_ami[3][1]=-1;
+$dat_ami[3][0]=0;
+$dat_ami[3][1]=0;
 $dat_ami[3][2]=0;
 $dat_ami[3][3]=0;
 
 $dat_ami[4][0]=0;
 $dat_ami[4][1]=0;
-$dat_ami[4][2]=1;
-$dat_ami[4][3]=-1;
+$dat_ami[4][2]=0;
+$dat_ami[4][3]=0;
 
-$dat_ami[5][0]=1;
-$dat_ami[5][1]=-1;
+$dat_ami[5][0]=0;
+$dat_ami[5][1]=0;
 $dat_ami[5][2]=0;
 $dat_ami[5][3]=0;
 
@@ -39,6 +39,8 @@ $dat_ami[7][0]=0;
 $dat_ami[7][1]=0;
 $dat_ami[7][2]=0;
 $dat_ami[7][3]=0;
+
+
 ?>
 
 <html>
@@ -142,7 +144,6 @@ $dat_ami[7][3]=0;
 	top:2vw;
 	left:5vw;;
 	background:#903090;
-
 }
 
 #r2{
@@ -162,7 +163,7 @@ $dat_ami[7][3]=0;
 #r4{
 	top:2vw;
 	left:65vw;;
-	background:#e0f000;
+	background:#9090e0;
 }
 
 </style>
@@ -171,31 +172,23 @@ $dat_ami[7][3]=0;
 <script>
 $(function(){
 	$('.start').on('click',function(){
-		$('.discover').delay(100).animate({'height':'0vw'},500);
-/*
 		Tmp=$(this).attr('id').replace("r", "");
-
-		$.post("post_set_kiyaku.php",{
-			'user_id':User_id,
-			'tmp':Tmp,
+		$.post("post_amida.php",{
+			'Dat':Tmp,
 		},
 		function(data){
 			console.log(data);
-			$('.cover').fadeIn(500);
+			$('.discover').delay(100).animate({'height':'0vw'},500);
+			$('.box_base').html(data);
 		});
-*/
-
 	});
+
 /*	$('.d_line').animate({'width':'25vw'},1000);*/
-	
 });
 </script>
 </head>
-
 <Body style="background:#f0e0ff;text-align:center;">
-
 <div class="amida_box">
-
 	<div id="r1" class="start">START</div>
 	<div id="r2" class="start">START</div>
 	<div id="r3" class="start">START</div>
