@@ -180,6 +180,9 @@ $(function(){
 			console.log(data);
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data);
+
+
+
 		});
 	});
 
