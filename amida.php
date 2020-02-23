@@ -35,7 +35,7 @@ $dat_ami[4][3]=0;
 	display:inline-block;
 	position:absolute;
 	width:20vw;
-	height:15vw;
+	height:12vw;
 	border-left:1vw solid #909090;
 	box-sizing:border-box;
 	z-index:1;
@@ -76,7 +76,7 @@ $dat_ami[4][3]=0;
 	display:inline-block;
 	position:absolute;
 	width:0vw;
-	height:15vw;
+	height:12vw;
 	border-bottom:2vw solid #ff0000;
 	box-sizing:border-box;
 	z-index:3;
@@ -86,7 +86,7 @@ $dat_ami[4][3]=0;
 	display		:inline-block;
 	position	:absolute;
 	width		:0vw;
-	height		:15vw;
+	height		:12vw;
 	border-bottom:2vw solid #ff0000;
 	box-sizing	:border-box;
 	z-index		:4;
@@ -205,13 +205,12 @@ $dat_ami[4][3]=0;
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
 $(function(){
-
-	
 	$('.amida_box').on('click','.sel',function(){
 		$(this).css('border-color','#ff0000');
 	
 		$('.sel').removeClass('sel');
 		Tmp=$(this).attr('id').replace("r", "");
+
 		$.post("post_amida.php",{
 			'tmp':Tmp,
 		},
@@ -219,10 +218,13 @@ $(function(){
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data);
 		});
+/*	
+		function(){	$('#b_0_0').animate({'height':'12vw'},1000)});
+		$('#c_0_0').animate({'width':'20vw'},1000)});
+*/
 	});
-
-/*	$('.d_line').animate({'width':'25vw'},1000);*/
 });
+
 </script>
 </head>
 <Body style="background:#f0e0ff;text-align:center;">
