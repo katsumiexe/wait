@@ -155,7 +155,7 @@ $(function(){
 	$('.start').on('click',function(){
 		Tmp=$(this).attr('id').replace("r", "");
 		$.post("post_amida.php",{
-			'Dat':Tmp,
+			'tmp':Tmp,
 		},
 		function(data){
 			console.log(data);

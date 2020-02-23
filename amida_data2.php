@@ -1,8 +1,9 @@
 <?
-$goal[0]=1;
-$goal[1]=0;
-$goal[2]=3;
-$goal[3]=2;
+$ttl="data2";
+$goal[0]=2;
+$goal[1]=3;
+$goal[2]=1;
+$goal[3]=0;
 
 $dat_ami[0][0]=1;
 $dat_ami[0][1]=-1;
@@ -10,14 +11,14 @@ $dat_ami[0][2]=1;
 $dat_ami[0][3]=-1;
 
 $dat_ami[1][0]=0;
-$dat_ami[1][1]=1;	
-$dat_ami[1][2]=-1;
-$dat_ami[1][3]=0;
+$dat_ami[1][1]=0;	
+$dat_ami[1][2]=1;
+$dat_ami[1][3]=-1;
 
-$dat_ami[2][0]=1;
-$dat_ami[2][1]=-1;
-$dat_ami[2][2]=1;
-$dat_ami[2][3]=-1;
+$dat_ami[2][0]=0;
+$dat_ami[2][1]=1;
+$dat_ami[2][2]=-1;
+$dat_ami[2][3]=0;
 
 $dat_ami[3][0]=1;
 $dat_ami[3][1]=-1;
@@ -33,5 +34,5 @@ $dat_ami[5][0]=0;
 $dat_ami[5][1]=0;
 $dat_ami[5][2]=0;
 $dat_ami[5][3]=0;
-?>
 
+?>
