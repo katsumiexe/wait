@@ -7,6 +7,7 @@ for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
 		$left	=$n*20;
+		$left_r	=(2-$n)*20;
 
 		$dat.="<div id=\"a_{$n}_{$s}\" class=\"a_line ";
 		$dat2.="<div id=\"b_{$n}_{$s}\" class=\"b_line ";
@@ -28,7 +29,7 @@ for($s=0;$s<6;$s++){
 		$dat.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
 		$dat2.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
 		$dat3.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
-		$dat4.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
+		$dat4.="\" style=\"top:{$top}vw; right:{$left_r}vw;\"></div>";
 	}
 }
 

@@ -52,7 +52,7 @@ $dat_ami[4][3]=0;
 
 .discover{
 	position:absolute;
-	bottom:32vw;
+	bottom:35vw;
 	left:-4vw;
 	width:92vw;
 	height:40vw;
@@ -204,6 +204,9 @@ $dat_ami[4][3]=0;
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
+var Tm=800;
+var Ad=120;
+
 $(function(){
 	$('.amida_box').on('click','.sel',function(){
 		$(this).css('border-color','#ff0000');
@@ -217,11 +220,29 @@ $(function(){
 		function(data){
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data);
+
+			$('#b_0_0').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
+			$('#c_0_0').delay(Tm).animate({'width':'22vw'},Ad);
+			Tm+=Ad;
+			$('#b_1_1').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
+			$('#c_1_1').delay(Tm).animate({'width':'22vw'},Ad);
+			Tm+=Ad;
+			$('#b_2_2').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
+			$('#d_1_2').delay(Tm).animate({'width':'20vw'},Ad);
+			Tm+=Ad;
+			$('#b_1_3').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
+			$('#d_0_3').delay(Tm).animate({'width':'20vw'},Ad);
+			Tm+=Ad;
+			$('#b_0_4').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
+			$('#b_0_5').delay(Tm).animate({'height':'12vw'},Ad);
+			Tm+=Ad;
 		});
-/*	
-		function(){	$('#b_0_0').animate({'height':'12vw'},1000)});
-		$('#c_0_0').animate({'width':'20vw'},1000)});
-*/
+
 	});
 });
 
