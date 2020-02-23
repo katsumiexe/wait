@@ -124,6 +124,37 @@ $dat_ami[4][3]=0;
 	border		:1vw solid #fafafa;
 }
 
+.goal_1{
+	position	:absolute;
+	width		:15vw;
+	height		:8vw;
+	line-height	:8vw;
+	z-index		:4;
+	box-shadow	:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
+	font-size	:3.5vw;
+	cursor		:pointer;	
+	border		:1vw solid #ff3030;
+	background	:#fff0f5;
+	color		:#ff3030;
+	font-weight:600;
+}
+
+.goal_2{
+	position	:absolute;
+	width		:15vw;
+	height		:8vw;
+	line-height	:8vw;
+	z-index		:4;
+	box-shadow	:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
+	font-size	:3.5vw;
+	cursor		:pointer;	
+	border		:1vw solid #a0a0a0;
+	background	:#f0f0f0;
+	color		:#a0a0a0;
+	font-weight:600;
+}
+
+
 #r0{
 	top:2vw;
 	left:4vw;;
@@ -146,6 +177,27 @@ $dat_ami[4][3]=0;
 	top:2vw;
 	left:63vw;;
 	background:#9090e0;
+}
+
+
+#g0{
+	bottom:2vw;
+	left:4vw;;
+}
+
+#g1{
+	bottom:2vw;
+	left:24vw;;
+}
+
+#g2{
+	bottom:2vw;
+	left:44vw;;
+}
+
+#g3{
+	bottom:2vw;
+	left:63vw;;
 }
 
 </style>
@@ -179,7 +231,6 @@ $(function(){
 	<div id="r1" class="start sel">START</div>
 	<div id="r2" class="start sel">START</div>
 	<div id="r3" class="start sel">START</div>
-
     <div class="box_base">	
     	<?for($s=0;$s<6;$s++){?>
     		<?for($n=0;$n<3;$n++){?>
@@ -203,6 +254,11 @@ $(function(){
 		<?}?>
     </div>
 	<div class="discover"></div>
+
+	<div id="g0" class="goal_1">当り！</div>
+	<div id="g1" class="goal_2">残念…</div>
+	<div id="g2" class="goal_2">残念…</div>
+	<div id="g3" class="goal_2">残念…</div>
 </div>
 </body>
 </html>

@@ -19,7 +19,7 @@
 	border-radius: 50%;
 	width: 124px;
 	height: 124px;
-	background:linear-gradient(135deg, #004000, #00a000);
+	background:linear-gradient(135deg, #00a000, #004000);
 	border-radius:50%;
 	z-index:101;
 }
@@ -44,9 +44,9 @@ svg {
 
 circle {
     fill: transparent;
-    stroke: #ffffc0;
+    stroke: #ffffe0;
     stroke-width: 4;
-    animation: circle 3s;
+    animation: circle 2s;
 }
 
 @keyframes circle {

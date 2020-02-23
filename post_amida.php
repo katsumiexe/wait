@@ -8,10 +8,10 @@ for($s=0;$s<6;$s++){
 		$top	=$s*12;
 		$left	=$n*20;
 
-		$dat.="<div class=\"a_line ";
-		$dat2.="<div class=\"b_line ";
-		$dat3.="<div class=\"c_line ";
-		$dat4.="<div class=\"d_line ";
+		$dat.="<div id=\"a_{$n}_{$s}\" class=\"a_line ";
+		$dat2.="<div id=\"b_{$n}_{$s}\" class=\"b_line ";
+		$dat3.="<div id=\"c_{$n}_{$s}\" class=\"c_line ";
+		$dat4.="<div id=\"d_{$n}_{$s}\" class=\"d_line ";
 
 		if($dat_ami[$s][$n] ==1){
 		$dat.=" a_line_on";
