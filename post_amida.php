@@ -1,11 +1,7 @@
 <?
 
-
 $tmp=$_POST["tmp"];
 include_once("./amida_data{$tmp}.php");
-
-$dat=$ttl;
-
 
 for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){

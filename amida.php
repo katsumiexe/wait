@@ -121,29 +121,30 @@ $dat_ami[4][3]=0;
 	box-shadow	:0.5vw 0.5vw 1vw rgba(80,80,80,0.8);
 	font-size	:3.5vw;
 	cursor		:pointer;	
+	border		:1vw solid #fafafa;
 }
 
 #r0{
 	top:2vw;
-	left:5vw;;
+	left:4vw;;
 	background:#903090;
 }
 
 #r1{
 	top:2vw;
-	left:25vw;;
+	left:24vw;;
 	background:#ffa0d0;
 }
 
 #r2{
 	top:2vw;
-	left:45vw;;
+	left:44vw;;
 	background:#e0f000;
 }
 
 #r3{
 	top:2vw;
-	left:65vw;;
+	left:63vw;;
 	background:#9090e0;
 }
 
@@ -152,18 +153,19 @@ $dat_ami[4][3]=0;
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
 $(function(){
-	$('.start').on('click',function(){
+
+	
+	$('.amida_box').on('click','.sel',function(){
+		$(this).css('border-color','#ff0000');
+	
+		$('.sel').removeClass('sel');
 		Tmp=$(this).attr('id').replace("r", "");
 		$.post("post_amida.php",{
 			'tmp':Tmp,
 		},
 		function(data){
-			console.log(data);
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data);
-
-
-
 		});
 	});
 
@@ -173,10 +175,10 @@ $(function(){
 </head>
 <Body style="background:#f0e0ff;text-align:center;">
 <div class="amida_box">
-	<div id="r0" class="start">START</div>
-	<div id="r1" class="start">START</div>
-	<div id="r2" class="start">START</div>
-	<div id="r3" class="start">START</div>
+	<div id="r0" class="start sel">START</div>
+	<div id="r1" class="start sel">START</div>
+	<div id="r2" class="start sel">START</div>
+	<div id="r3" class="start sel">START</div>
 
     <div class="box_base">	
     	<?for($s=0;$s<6;$s++){?>
