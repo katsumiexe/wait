@@ -2,87 +2,30 @@
 <head>
 <style>
 .main_circle {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background:linear-gradient(135deg, #aaaaaa, #888888);
-  background:#888888;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background:linear-gradient(135deg, #aaaaaa, #888888);
+	z-index:100;
 }
  .circle {
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  margin:auto;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  box-shadow: 0px 0px 2px 4px rgba(255,255,200,1);
-  border:2px solid #ffffff;
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	border-radius: 50%;
+	width: 124px;
+	height: 124px;
+	background:linear-gradient(135deg, #004000, #00a000);
+	border-radius:50%;
+	z-index:101;
 }
 
-.cover0{
-  animation: draw 0.5s linear forwards;
-}
-.cover1{
-  position: absolute;
-  overflow: hidden;
-  top:-2px;
-  width: 42px;
-  height: 84px;
-  left: 40px;
-  border-radius:0 100% 100% 0 / 0 50% 50% 0;
-  background: #ff0000;
-  transform-origin: 0 50%;
-  z-index:1;
-}
 
-.cover2{
-  position: absolute;
-  overflow: hidden;
-  top:-2px;
-  width: 42px;
-  height: 84px;
-  left: -2px;
-  border-radius:100% 0 0 100% / 50% 0 0 50%;
-  background: #0000ff;
-  transform-origin: 100% 50%;
-  z-index:2;
-}
 
-.cover3{
-  position: absolute;
-  border-radius:0 100% 100% 0 / 0 50% 50% 0;
-  top:0px;
-  left:40px;
-  width: 40px;
-  height: 80px;
-  z-index:5;
-  background:#008000;
-  background:linear-gradient(135deg, #00a000, #004000);
-  z-index:3;
-}
-
-.cover3_a{
-  box-shadow: 0px 0px 2px 4px rgba(255,255,200,0.4);
-  border:2px solid #ffffff;
-  left:38px;
-  top:-2px;
-  }
-.cover4{
-  position: absolute;
-  border-radius:100% 0 0 100% / 50% 0 0 50%;
-  top:0px;
-  left:0px;
-  width: 40px;
-  height: 80px;
-  z-index:5;
-  background:#008000;
-  background:linear-gradient(135deg, #00a000, #004000);
-  z-index:4;
-}
 
 /* 円を描くアニメーション */
 @keyframes draw {
@@ -103,17 +46,15 @@ circle {
     fill: transparent;
     stroke: #ffffc0;
     stroke-width: 4;
-    animation: circle 1.5s;
+    animation: circle 3s;
 }
 
 @keyframes circle {
   0% { stroke-dasharray: 0 377; }
 /*  99.9%,to { stroke-dasharray: 377 377; }*/
   99.9%{ stroke-dasharray: 377 377; }
-
 }
 /*----------------------------------*/
-
 
 .box_1{
   position:relative;
@@ -133,7 +74,7 @@ circle {
   border-radius:50%;
   background:#ffffff;
   box-shadow:0px 0px 4px 4px rgba(255,255,255,0.5);
-  z-index:2;
+  z-index:112;
 }
 
 .point{
@@ -143,7 +84,7 @@ circle {
   right:0;
   bottom:0;
   margin:auto;
-  z-index:1;
+  z-index:111;
 
   border:1px solid #ffffff;
   display:inline-block;
@@ -170,7 +111,8 @@ $(function(){
 </script>
 </head>
 <Body style="background:#f0e0ff;">
-<div class="main_circle">
+
+<!--div class="main_circle">
   <div class="circle">
     <span class="cover1"></span>
     <span class="cover2"></span>
@@ -180,16 +122,22 @@ $(function(){
   </div>
 </div>
 <br><br>
+
+
 <div class="box_1">
   <div class="point"></div>
   <div class="point_2"></div>
+</div-->
+
+<div class="main_circle">
+	<div class="point"></div>
+	<div class="point_2"></div>
+	<div class="circle">
+		<svg width="124" height="124">
+		  <circle cx="62" cy="62" r="60" />
+		</svg>
+	</div>
 </div>
-
-
-
-<svg width="124" height="124">
-  <circle cx="62" cy="62" r="60" />
-</svg>
 
 </body>
 </html>
