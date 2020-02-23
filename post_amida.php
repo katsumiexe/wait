@@ -2,7 +2,7 @@
 
 <include_once("./amida_data0.php")>
 
-for($s=0;$s<8;$s++){
+for($s=0;$s<5;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
 		$left	=$n*20;
