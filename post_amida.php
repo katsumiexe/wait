@@ -1,8 +1,21 @@
 <?
 
-<include_once("./amida_data0.php")>
+$tmp=$_POST["tmp"];
 
-for($s=0;$s<5;$s++){
+if($tmp ==0){
+	$st=3;
+}elseif($tmp ==1){
+	$st=2;
+}elseif($tmp ==2){
+	$st=1;
+}elseif($tmp ==3){
+	$st=0;
+}
+
+
+include_once("./amida_data{$st}.php");
+
+for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
 		$left	=$n*20;

@@ -5,8 +5,8 @@ $dat_ami[0][1]=-1;
 $dat_ami[0][2]=1;
 $dat_ami[0][3]=-1;
 
-$dat_ami[1][0]=1;
-$dat_ami[1][1]=-1;
+$dat_ami[1][0]=0;
+$dat_ami[1][1]=0;
 $dat_ami[1][2]=0;
 $dat_ami[1][3]=0;
 
@@ -17,8 +17,8 @@ $dat_ami[2][3]=0;
 
 $dat_ami[3][0]=0;
 $dat_ami[3][1]=0;
-$dat_ami[3][2]=1;
-$dat_ami[3][3]=-1;
+$dat_ami[3][2]=0;
+$dat_ami[3][3]=0;
 
 $dat_ami[4][0]=0;
 $dat_ami[4][1]=1;
@@ -59,7 +59,7 @@ $dat_ami[4][3]=0;
 	z-index:5;
 	background:linear-gradient(#c0e0ff,#a0c0ff);
 	box-shadow:0.5vw 0.5vw 1vw rgba(60,60,60,0.8);
-	background:rgba(20,20,255,0.6);
+/*	background:rgba(20,20,255,0.6);*/
 }
 
 .b_line{
@@ -123,25 +123,25 @@ $dat_ami[4][3]=0;
 	cursor		:pointer;	
 }
 
-#r1{
+#r0{
 	top:2vw;
 	left:5vw;;
 	background:#903090;
 }
 
-#r2{
+#r1{
 	top:2vw;
 	left:25vw;;
 	background:#ffa0d0;
 }
 
-#r3{
+#r2{
 	top:2vw;
 	left:45vw;;
 	background:#e0f000;
 }
 
-#r4{
+#r3{
 	top:2vw;
 	left:65vw;;
 	background:#9090e0;
@@ -173,10 +173,10 @@ $(function(){
 </head>
 <Body style="background:#f0e0ff;text-align:center;">
 <div class="amida_box">
+	<div id="r0" class="start">START</div>
 	<div id="r1" class="start">START</div>
 	<div id="r2" class="start">START</div>
 	<div id="r3" class="start">START</div>
-	<div id="r4" class="start">START</div>
 
     <div class="box_base">	
     	<?for($s=0;$s<6;$s++){?>
