@@ -15,16 +15,16 @@ for($s=0;$s<6;$s++){
 		$dat4.="<div id=\"d_{$n}_{$s}\" class=\"d_line ";
 
 		if($dat_ami[$s][$n] ==1){
-		$dat.=" a_line_on";
-		$dat2.=" b_line_on";
-		$dat3.=" c_line_on";
-		$dat4.=" d_line_on";
+			$dat.=" a_line_on";
+			$dat2.=" b_line_on";
+			$dat3.=" c_line_on";
+			$dat4.=" d_line_on";
 		}
 		if($n ==2){
-		$dat.=" a_line_end";
-		$dat2.=" b_line_end";
-		$dat3.=" c_line_end";
-		$dat4.=" d_line_end";
+			$dat.=" a_line_end";
+			$dat2.=" b_line_end";
+			$dat3.=" c_line_end";
+			$dat4.=" d_line_end";
 		}
 		$dat.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
 		$dat2.="\" style=\"top:{$top}vw; left:{$left}vw;\"></div>";
