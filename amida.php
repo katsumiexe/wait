@@ -1,11 +1,8 @@
 <?
 
-$ss=$_REQUEST["ss"];
-$rr=$_REQUEST["rr"];
-if(!$ss) $ss=1;
-if(!$rr) $rr=0;
+$w=$_REQUEST["w"];
+if(!$w) $w=0;
 
-$wn=1;
 
 $dat_ami[0][0]=1;
 $dat_ami[0][1]=-1;

@@ -15,11 +15,9 @@ if($wn== 1){
 	}
 }
 
-$list["set"]=$set;
+include_once("https://katsumiexe.github.io/wait/amida_data{$set}.php");
 
-include_once("./amida_data{$set}.php");
 
-$dat=$set;
 for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
