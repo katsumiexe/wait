@@ -15,8 +15,10 @@ if($wn== 1){
 	}
 }
 
-include_once("https://katsumiexe.github.io/wait/amida_data{$set}.php");
+//include_once("https://katsumiexe.github.io/wait/amida_data{$set}.php");
+include_once("./amida_data{$set}.php");
 
+$list["set"]=$tmp;
 
 for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
