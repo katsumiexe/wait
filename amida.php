@@ -1,5 +1,9 @@
 <?
 
+$w=$_REQUEST["w"];
+if(!$w) $w=2;
+
+
 $dat_ami[0][0]=1;
 $dat_ami[0][1]=-1;
 $dat_ami[0][2]=1;
@@ -88,6 +92,16 @@ $dat_ami[4][3]=0;
 	width		:0vw;
 	height		:12vw;
 	border-bottom:2vw solid #ff0000;
+	box-sizing	:border-box;
+	z-index		:4;
+}
+
+.e_line{
+	display		:inline-block;
+	position	:absolute;
+	width		:20vw;
+	height		:0vw;
+	border-right:2vw solid #ff0000;
 	box-sizing	:border-box;
 	z-index		:4;
 }
@@ -203,18 +217,20 @@ $dat_ami[4][3]=0;
 .amida_win{
 	position:relative;
 	display:none;
-	width			:70vw;
+	width			:84vw;
 	background		:#fafafa;
 	color			:#606060;
+	margin:2vw auto;
 }
 
 .amida_lose{
 	position:relative;
 	display:none;
-	width			:70vw;
+	width			:84vw;
 	background		:linear-gradient(#c0c0c0,#909090);
 	color			:#fafafa;
 	height			:12vw;
+	margin:2vw auto;
 }
 
 .lose_1{
@@ -244,10 +260,11 @@ $dat_ami[4][3]=0;
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
+<script src="./f_amida.js"></script>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <script>
 var Tm=800;
-var Ad=120;
+var Ad=800;
 
 $(function(){
 	$('.amida_box').on('click','.sel',function(){
@@ -262,27 +279,7 @@ $(function(){
 		function(data){
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data);
-
-			$('#b_0_0').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
-			$('#c_0_0').delay(Tm).animate({'width':'22vw'},Ad);
-			Tm+=Ad;
-			$('#b_1_1').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
-			$('#c_1_1').delay(Tm).animate({'width':'22vw'},Ad);
-			Tm+=Ad;
-			$('#b_2_2').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
-			$('#d_1_2').delay(Tm).animate({'width':'20vw'},Ad);
-			Tm+=Ad;
-			$('#b_1_3').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
-			$('#d_0_3').delay(Tm).animate({'width':'20vw'},Ad);
-			Tm+=Ad;
-			$('#b_0_4').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
-			$('#b_0_5').delay(Tm).animate({'height':'12vw'},Ad);
-			Tm+=Ad;
+			res0_<?=$w?>();
 		});
 
 	});
@@ -320,9 +317,10 @@ $(function(){
 
 
 });
-
+</script>
 </head>
-<Body style="background:#f0e0ff;text-align:center;">
+
+<body style="background:#f0e0ff;text-align:center;">
 <div class="amida_box">
 	<div id="r0" class="start sel">START</div>
 	<div id="r1" class="start sel">START</div>
@@ -362,8 +360,7 @@ $(function(){
 	<div style="text-align:left; padding:3px 5px">下記に必要事項を記載の上、送信して下さい。</div>
 	<table style="text-align:center;margin:0 auto;">
 
-	<form id="send_form" action="./p_slot_ok.php<?=$ses?>" method="post">
-		<?=$hidden_ses?>
+	<form id="send_form" action="./p_slot_ok.php" method="post">
 		<input type="hidden" value="<?=$ope_p[0]?>" name="id">
 		<tr>
 			<td style="padding:2px; text-align:right">お名前</td>
