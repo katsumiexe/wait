@@ -1,8 +1,11 @@
 <?
 
-$w=$_REQUEST["w"];
-if(!$w) $w=2;
+$ss=$_REQUEST["ss"];
+$rr=$_REQUEST["rr"];
+if(!$ss) $ss=1;
+if(!$rr) $rr=0;
 
+$wn=1;
 
 $dat_ami[0][0]=1;
 $dat_ami[0][1]=-1;
@@ -275,11 +278,14 @@ $(function(){
 
 		$.post("post_amida.php",{
 			'tmp':Tmp,
+			'wn':'<?=$wn?>',
 		},
 		function(data){
 			$('.discover').delay(100).animate({'height':'0vw'},500);
-			$('.box_base').html(data);
-			res0_<?=$w?>();
+			$('.box_base').html(data.dat);
+
+			res<?=$ss?>_<?=$rr?>();
+
 		});
 
 	});

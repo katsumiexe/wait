@@ -1,8 +1,25 @@
 <?
 
 $tmp=$_POST["tmp"];
-include_once("./amida_data{$tmp}.php");
+$wn	=$_POST["wn"];
 
+if($wn== 1){
+	$set=$tmp;
+}else{
+	$set=rand(0,3);
+	if($set == $tmp){
+		$set++;
+	}
+	if($set>=4){
+		$set=0;
+	}
+}
+
+$list["set"]=$set;
+
+include_once("./amida_data{$set}.php");
+
+print($set."◇");
 for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
@@ -31,8 +48,9 @@ for($s=0;$s<6;$s++){
 	}
 }
 
-$dat.=$dat2.$dat3.$dat4.$dat5;
+$list["dat"]=$dat.$dat2.$dat3.$dat4.$dat5;
 
-echo $dat;
+echo json_encode($list);
+
 exit;
 ?>
