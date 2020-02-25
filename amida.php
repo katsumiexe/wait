@@ -200,9 +200,51 @@ $dat_ami[4][3]=0;
 	left:63vw;;
 }
 
+.amida_win{
+	position:relative;
+	display:none;
+	width			:70vw;
+	background		:#fafafa;
+	color			:#606060;
+}
+
+.amida_lose{
+	position:relative;
+	display:none;
+	width			:70vw;
+	background		:linear-gradient(#c0c0c0,#909090);
+	color			:#fafafa;
+	height			:12vw;
+}
+
+.lose_1{
+	display			:inline-block;
+	position		:absolute;
+	top				:0.5vw;
+	left			:0;
+	right			:0;
+	margin			:auto;
+	font-size		:5.5vw;
+	font-weight		:600;
+	
+}
+
+.lose_2{
+	display			:inline-block;
+	position		:absolute;
+	bottom			:0.5vw;
+	left			:0;
+	right			:0;
+	margin			:auto;
+	font-size		:3.6vw;
+	
+}
+
+
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <script>
 var Tm=800;
 var Ad=120;
@@ -244,9 +286,41 @@ $(function(){
 		});
 
 	});
+
+	$("#send_add").on('click', function(){
+		if($('input[name=addr11]').val()==''){
+			alert('住所が入力されていません。');
+			return false;
+		}else{
+			$('#send_form').submit();
+		}
+	});
+
+	$('a').on('click', function(){
+		if( $('#disp').css('display') == 'none' ||'<?=$orz?>' == '1'){
+			if(!confirm('このまま離脱されますとプレゼントは無効になりますがよろしいですか')){
+				return false;
+			}else{
+				Tmp=$(this).attr('href');
+				$('#links').attr('action',Tmp).submit();
+			}
+		}else{
+			Tmp=$(this).attr('href');
+			$('#links').attr('action',Tmp).submit();
+		}
+	});
+
+	$("#btn_start").on("click", function(){
+		$("#btn_start").attr("disabled", "disabled");
+		$(".wrapper").animate({'top':'-2160px'},3000,
+		function(){;
+			$("#disp").delay(1000).show();
+		});
+	});
+
+
 });
 
-</script>
 </head>
 <Body style="background:#f0e0ff;text-align:center;">
 <div class="amida_box">
@@ -284,46 +358,47 @@ $(function(){
 	<div id="g3" class="goal_2">残念…</div>
 </div>
 <div class="amida_win">
+	<span style="color:#ff0000;">おめでとうございます♪</span><br>
+	<div style="text-align:left; padding:3px 5px">下記に必要事項を記載の上、送信して下さい。</div>
+	<table style="text-align:center;margin:0 auto;">
 
-
+	<form id="send_form" action="./p_slot_ok.php<?=$ses?>" method="post">
+		<?=$hidden_ses?>
+		<input type="hidden" value="<?=$ope_p[0]?>" name="id">
+		<tr>
+			<td style="padding:2px; text-align:right">お名前</td>
+			<td style="padding:1px;text-align:left"><input type="text" name="t_name" size="20"></td>
+		</tr>
+		<tr>
+			<td style="padding:2px; text-align:right">郵便番号</td>
+			<td style="padding:1px; text-align:left"><input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">(数字7桁)</td>
+		</tr>
+		<tr>
+			<td style="padding:2px; text-align:right">ご住所</td>
+			<td style="padding:1px; text-align:left"><input type="text" name="addr11" size="20"></td>
+		</tr>
+		<tr>
+			<td>　</td>
+			<td style="padding:1px; text-align:left"><input type="text" name="addr12" size="20"></td>
+		</tr>
+		<tr>
+			<td style="display:inline-block; padding:2px; text-align:right;">備考</td>
+			<td style="padding:1px; text-align:left"><textarea cols="18" rows="2" name="t_log" style="overflow-y:scroll;overflow-x:none;"></textarea></td>
+		</tr>
+	</form>
+		<tr>
+			<td colspan="2" style="padding:1px; text-align:center"><button id="send_add" type="button" value="送信">送信</button></td>
+		</tr>
+	</table>
 </div>
+
+
 
 <div class="amida_lose">
 <span class="lose_1">残念……</span>
 <span class="lose_2">また挑戦してください</span>
 </div>
 
-.amida_lose{
-	position:relative;
-	display:none;
-	width			:70vw;
-	background		:linear-gradient(#c0c0c0,#909090);
-	color			:#fafafa;
-	height			:12vw;
-}
-
-.lose_1{
-	display			:inline-block;
-	position		:absolute;
-	top				:0.5vw;
-	left			:0;
-	right			:0;
-	margin			:auto;
-	font-size		:5.5vw;
-	font-weight		:600;
-	
-}
-
-.lose_2{
-	display			:inline-block;
-	position		:absolute;
-	bottom			:0.5vw;
-	left			:0;
-	right			:0;
-	margin			:auto;
-	font-size		:3.6vw;
-	
-}
 
 
 
