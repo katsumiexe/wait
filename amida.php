@@ -283,5 +283,49 @@ $(function(){
 	<div id="g2" class="goal_2">残念…</div>
 	<div id="g3" class="goal_2">残念…</div>
 </div>
+<div class="amida_win">
+
+
+</div>
+
+<div class="amida_lose">
+<span class="lose_1">残念……</span>
+<span class="lose_2">また挑戦してください</span>
+</div>
+
+.amida_lose{
+	position:relative;
+	display:none;
+	width			:70vw;
+	background		:linear-gradient(#c0c0c0,#909090);
+	color			:#fafafa;
+	height			:12vw;
+}
+
+.lose_1{
+	display			:inline-block;
+	position		:absolute;
+	top				:0.5vw;
+	left			:0;
+	right			:0;
+	margin			:auto;
+	font-size		:5.5vw;
+	font-weight		:600;
+	
+}
+
+.lose_2{
+	display			:inline-block;
+	position		:absolute;
+	bottom			:0.5vw;
+	left			:0;
+	right			:0;
+	margin			:auto;
+	font-size		:3.6vw;
+	
+}
+
+
+
 </body>
 </html>
