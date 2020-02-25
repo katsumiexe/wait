@@ -267,7 +267,7 @@ $dat_ami[4][3]=0;
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <script>
 var Tm=800;
-var Ad=800;
+var Ad=120;
 
 $(function(){
 	$('.amida_box').on('click','.sel',function(){
@@ -276,16 +276,22 @@ $(function(){
 		$('.sel').removeClass('sel');
 		Tmp=$(this).attr('id').replace("r", "");
 
-		$.post("post_amida.php",{
-			'tmp':Tmp,
-			'wn':'<?=$wn?>',
-		},
-		function(data){
+		$.ajax({
+			url:'post_amida.php',
+			data:{"tmp":Tmp,"wn":"<?=$wn?>"},
+			dataType: 'json',
+			type:'post',
+
+		}).done(function(data, textStatus, jqXHR){
 			$('.discover').delay(100).animate({'height':'0vw'},500);
 			$('.box_base').html(data.dat);
+			Res(Tmp,data.set);
 
-			res<?=$ss?>_<?=$rr?>();
-
+		}).fail(function(jqXHR, textStatus, errorThrown){
+			console.log(jqXHR);
+		    console.log(textStatus);
+		    console.log(errorThrown);
+			console.log(jqXHR.status);
 		});
 
 	});

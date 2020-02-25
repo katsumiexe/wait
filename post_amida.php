@@ -19,7 +19,7 @@ $list["set"]=$set;
 
 include_once("./amida_data{$set}.php");
 
-print($set."◇");
+$dat=$set;
 for($s=0;$s<6;$s++){
 	for($n=0;$n<3;$n++){
 		$top	=$s*12;
