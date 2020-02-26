@@ -261,7 +261,7 @@ $dat_ami[4][3]=0;
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
 
-<script src="https://katsumiexe.github.io/wait/f_amida.js" charset="UTF-8"></script>
+<script src="https://katsumiexe.github.io/eve_2003/f_amida.js" charset="UTF-8"></script>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <script>
 var Tm=800;
