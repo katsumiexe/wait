@@ -55,10 +55,10 @@ circle {
 	right		:0;
 	bottom		:0;
 	margin		:auto;
-	height		:2px;
-	width		:2px;
+	height		:8px;
+	width		:8px;
 	border-radius:50%;
-	background	:#ffffff;
+	background	:#ffff00;
 	box-shadow	:0px 0px 4px 4px rgba(255,255,255,0.5);
 	z-index		:112;
 }
@@ -74,8 +74,8 @@ circle {
 
 	border		:1px solid #ffffff;
 	display		:inline-block;
-	height		:1px;
-	width		:1px;
+	height		:6px;
+	width		:6px;
 	border-radius:50%;
 	box-shadow	:0 0 2px 4px rgba(255,255,255,0.5),0 0 1px 2px rgba(255,255,255,0.5) inset;
 }
@@ -83,11 +83,15 @@ circle {
 .line_a{
 	position	:absolute;
 	top			:13px;
-	left		:13px;
+	left		:0;
+	right		:0;
+	margin		:auto;
 	z-index		:102;
 	height		:0px;
-	width		:60px;
-	border-right:4px solid #ffff00;
+	width		:4px;
+	background	:#fffff0;
+	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+
 }
 
 .line_b{
@@ -96,52 +100,71 @@ circle {
 	left		:36px;
 	z-index		:102;
 	height		:0px;
-	width		:70px;
-	border-right:4px solid #ffff00;
-	border-left:4px solid #ffff00;
+	width		:4px;
+	background	:#fffff0;
+	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
 }
 
 .line_c{
 	position	:absolute;
-	bottom		:46px;
-	left		:-8px;
+	bottom		:28px;
+	right		:36px;
 	z-index		:102;
-	height		:60px;
-	width		:70px;
-	transform: rotate(-39deg);
-	border-right:4px solid #0000ff;
+	height		:0px;
+	width		:4px;
+	background	:#fffff0;
+	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
 }
+
 
 .line_d{
 	position	:absolute;
-	top			:46px;
-	left		:-8px;
+	bottom		:75px;
+	right		:73px;
 	z-index		:102;
-	height		:60px;
-	width		:70px;
-	transform: rotate(39deg);
-	border-right:4px solid #0000ff;
+	height		:0px;
+	width		:4px;
+	transform: rotate(-39deg);
+	background	:#fffff0;
+	transform-origin:right bottom;
+	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
 }
 
 .line_e{
 	position	:absolute;
-	top			:88px;
-	left		:28px;
+	top			:75px;
+	left		:73px;
 	z-index		:102;
-	height		:60px;
-	width		:70px;
-	transform: rotate(-39deg);
-	border-right:4px solid #0000ff;
+	height		:0px;
+	width		:4px;
+	transform: rotate(39deg);
+	background	:#fffff0;
+	transform-origin:right top;
+	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
 }
 
 .line_f{
 	position	:absolute;
+	top			:75px;
+	left		:73px;
+	z-index		:102;
+	height		:0px;
+	width		:4px;
+	transform	: rotate(-39deg);
+	background	:#fffff0;
+	transform-origin:left top;
+	box-shadow:0px 0px 2px rgba(255,255,255,0.8);
+}
+
+.line_g{
+	position	:absolute;
 	bottom		:27px;
 	left		:36px;
 	z-index		:102;
-	height		:20px;
-	width		:78px;
-	border-bottom:4px solid #ff00ff;
+	height		:4px;
+	width		:0px;
+	background	:#fffff0;
+	box-shadow:0px 0px 2px rgba(255,255,255,0.8);
 }
 
 
@@ -156,13 +179,15 @@ $(function(){
 		$('.cover3').addClass('cover3_a');
 		$('.cover1').hide();
 	});
-/*
+
 	setInterval(function(){
-		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'1px',height:'1px', opacity: 1}, 1);
+		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
 	},1000);
-*/
-	$('.line_a').animate({height:'124px'}, 200);
-	$('.line_b').delay(200).animate({height:'94px'}, 200);
+
+	$('.line_a').animate({height:'124px'}, 1000);
+	$('.line_c,.line_b').delay(950).animate({height:'94px'}, 1000);
+	$('.line_d,.line_e,.line_f').delay(1900).animate({height:'60px'}, 1000);
+	$('.line_g').delay(2850).animate({width:'78px'}, 1000);
 
 
 
@@ -195,6 +220,7 @@ $(function(){
 	<div class="line_d"></div>
 	<div class="line_e"></div>
 	<div class="line_f"></div>
+	<div class="line_g"></div>
 
 	<div class="point"></div>
 	<div class="point_2"></div>
