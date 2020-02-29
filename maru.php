@@ -79,6 +79,72 @@ circle {
 	border-radius:50%;
 	box-shadow	:0 0 2px 4px rgba(255,255,255,0.5),0 0 1px 2px rgba(255,255,255,0.5) inset;
 }
+
+.line_a{
+	position	:absolute;
+	top			:13px;
+	left		:13px;
+	z-index		:102;
+	height		:0px;
+	width		:60px;
+	border-right:4px solid #ffff00;
+}
+
+.line_b{
+	position	:absolute;
+	bottom		:28px;
+	left		:36px;
+	z-index		:102;
+	height		:0px;
+	width		:70px;
+	border-right:4px solid #ffff00;
+	border-left:4px solid #ffff00;
+}
+
+.line_c{
+	position	:absolute;
+	bottom		:46px;
+	left		:-8px;
+	z-index		:102;
+	height		:60px;
+	width		:70px;
+	transform: rotate(-39deg);
+	border-right:4px solid #0000ff;
+}
+
+.line_d{
+	position	:absolute;
+	top			:46px;
+	left		:-8px;
+	z-index		:102;
+	height		:60px;
+	width		:70px;
+	transform: rotate(39deg);
+	border-right:4px solid #0000ff;
+}
+
+.line_e{
+	position	:absolute;
+	top			:46px;
+	right		:-8px;
+	z-index		:102;
+	height		:60px;
+	width		:70px;
+	transform: rotate(-39deg);
+	border-right:4px solid #0000ff;
+}
+
+.line_f{
+	position	:absolute;
+	bottom		:28px;
+	left		:36px;
+	z-index		:102;
+	height		:0px;
+	width		:70px;
+	border-bottom:4px solid #ff00ff;
+}
+
+
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
@@ -90,10 +156,15 @@ $(function(){
 		$('.cover3').addClass('cover3_a');
 		$('.cover1').hide();
 	});
-
+/*
 	setInterval(function(){
 		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'1px',height:'1px', opacity: 1}, 1);
 	},1000);
+*/
+	$('.line_a').animate({height:'124px'}, 200);
+	$('.line_b').delay(200).animate({height:'94px'}, 200);
+
+
 
 });
 </script>
@@ -118,12 +189,21 @@ $(function(){
 </div-->
 
 <div class="main_circle">
+	<div class="line_a"></div>
+	<div class="line_b"></div>
+	<div class="line_c"></div>
+	<div class="line_d"></div>
+	<div class="line_e"></div>
+	<div class="line_f"></div>
 	<div class="point"></div>
 	<div class="point_2"></div>
 	<div class="circle">
 		<svg width="124" height="124">
 		  <circle cx="62" cy="62" r="60" />
 		</svg>
+
+
+
 	</div>
 </div>
 
