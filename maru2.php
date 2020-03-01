@@ -182,8 +182,8 @@ $(function(){
 	});
 
 	setInterval(function(){
-		N=N-50;
-		if(N<50) N=50;
+		N=N-100;
+		if(N<50) N=100;
 		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
 	},N);
 
