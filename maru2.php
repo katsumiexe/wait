@@ -17,14 +17,14 @@
 	bottom:0;
 	margin:auto;
 	border-radius: 50%;
-	width: 124px;
-	height: 124px;
+	width: 120px;
+	height: 120px;
 	background:linear-gradient(135deg, #00a000, #004000);
-	border-radius:50%;
 	z-index:101;
+	border:4px solid #fffff0;
 }
 
-/*----------------------------------*/
+/*----------------------------------
 svg {
 	transform: rotate(-90deg);
 }
@@ -90,7 +90,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 
 }
 
@@ -102,7 +102,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 .line_c{
@@ -113,7 +113,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 
@@ -127,7 +127,7 @@ circle {
 	transform: rotate(-39deg);
 	background	:#fffff0;
 	transform-origin:right bottom;
-	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 .line_e{
@@ -140,7 +140,7 @@ circle {
 	transform: rotate(39deg);
 	background	:#fffff0;
 	transform-origin:right top;
-	box-shadow:0px 0px 4px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 .line_f{
@@ -153,7 +153,7 @@ circle {
 	transform	: rotate(-39deg);
 	background	:#fffff0;
 	transform-origin:left top;
-	box-shadow:0px 0px 2px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 .line_g{
@@ -164,7 +164,7 @@ circle {
 	height		:4px;
 	width		:0px;
 	background	:#fffff0;
-	box-shadow:0px 0px 2px rgba(255,255,255,0.8);
+	box-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
 
 
@@ -172,6 +172,7 @@ circle {
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
+var N=1000;
 $(function(){
 	$('.cover1').addClass('cover0');
 	$('.cover2').delay(500).queue(function(){
@@ -181,15 +182,15 @@ $(function(){
 	});
 
 	setInterval(function(){
+		N=N-50;
+		if(N<50) N=50;
 		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
-	},1000);
+	},N);
 
 	$('.line_a').animate({height:'124px'}, 1000);
-	$('.line_c,.line_b').delay(950).animate({height:'94px'}, 1000);
-	$('.line_d,.line_e,.line_f').delay(1900).animate({height:'60px'}, 1000);
-	$('.line_g').delay(2850).animate({width:'78px'}, 1000);
-
-
+	$('.line_c,.line_b').delay(500).animate({height:'94px'}, 1000);
+	$('.line_d,.line_e,.line_f').delay(1000).animate({height:'60px'}, 1000);
+	$('.line_g').delay(1600).animate({width:'78px'}, 1200);
 
 });
 </script>
@@ -211,6 +212,10 @@ $(function(){
 <div class="box_1">
   <div class="point"></div>
   <div class="point_2"></div>
+
+		<svg width="124" height="124">
+		  <circle cx="62" cy="62" r="60" />
+		</svg>
 </div-->
 
 <div class="main_circle">
@@ -221,18 +226,10 @@ $(function(){
 	<div class="line_e"></div>
 	<div class="line_f"></div>
 	<div class="line_g"></div>
-
 	<div class="point"></div>
 	<div class="point_2"></div>
 	<div class="circle">
-		<svg width="124" height="124">
-		  <circle cx="62" cy="62" r="60" />
-		</svg>
-
-
-
 	</div>
 </div>
-
 </body>
 </html>
