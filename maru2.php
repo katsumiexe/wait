@@ -209,7 +209,6 @@ $(function(){
 </div>
 <br><br>
 
-
 <div class="box_1">
   <div class="point"></div>
   <div class="point_2"></div>
@@ -218,7 +217,6 @@ $(function(){
 		  <circle cx="62" cy="62" r="60" />
 		</svg>
 </div-->
-
 <div class="main_circle">
 	<div class="line_a"></div>
 	<div class="line_b"></div>
