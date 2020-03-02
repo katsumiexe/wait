@@ -91,7 +91,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 
 }
 
@@ -103,7 +103,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 .line_c{
@@ -114,7 +114,7 @@ circle {
 	height		:0px;
 	width		:4px;
 	background	:#fffff0;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 
@@ -128,7 +128,7 @@ circle {
 	transform: rotate(-39deg);
 	background	:#fffff0;
 	transform-origin:right bottom;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 .line_e{
@@ -141,7 +141,7 @@ circle {
 	transform: rotate(39deg);
 	background	:#fffff0;
 	transform-origin:right top;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 .line_f{
@@ -154,7 +154,7 @@ circle {
 	transform	: rotate(-39deg);
 	background	:#fffff0;
 	transform-origin:left top;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 .line_g{
@@ -165,7 +165,7 @@ circle {
 	height		:4px;
 	width		:0px;
 	background	:#fffff0;
-	box-shadow:0px 0px 20px rgba(255,255,250,0.8);
+	box-shadow:0px 0px 20px 20px rgba(255,255,250,0.8);
 }
 
 
@@ -188,10 +188,10 @@ $(function(){
 		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
 	},N);
 
-	$('.line_a').animate({height:'124px'}, 1000);
-	$('.line_c,.line_b').delay(500).animate({height:'94px'}, 1000);
-	$('.line_d,.line_e,.line_f').delay(1000).animate({height:'60px'}, 1000);
-	$('.line_g').delay(1600).animate({width:'78px'}, 1200);
+	$('.line_a').animate({height:'124px'}, 800);
+	$('.line_c,.line_b').delay(500).animate({height:'94px'}, 800);
+	$('.line_d,.line_e,.line_f').delay(1000).animate({height:'60px'}, 800);
+	$('.line_g').delay(1500).animate({width:'78px'}, 800);
 
 });
 </script>
@@ -218,6 +218,8 @@ $(function(){
 		  <circle cx="62" cy="62" r="60" />
 		</svg>
 </div-->
+
+
 
 <div class="main_circle">
 	<div class="line_a"></div>
