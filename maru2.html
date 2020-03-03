@@ -10,6 +10,21 @@
 	z-index			:100;
 }
 
+.mid_circle {
+	position		: absolute;
+	top				:0;
+	left			:0;
+	right			:0;
+	bottom			:0;
+	margin			:auto;
+	width			:150px;
+	height			:150px;
+	border			:1px solid #202020;
+	border-radius	:50%;
+	background		:linear-gradient(135deg, #aaaaaa, #888888);
+	z-index			:100;
+}
+
  .circle {
 	position		: absolute;
 	top				:0;
@@ -216,6 +231,7 @@ $(function(){
 </head>
 <Body style="background:#f0e0ff;">
 <div class="main_circle">
+<div class="mid_circle">
 	<div class="line_a"></div>
 	<div class="line_b"></div>
 	<div class="line_c"></div>
@@ -226,6 +242,7 @@ $(function(){
 	<div class="point"></div>
 	<div class="point_2"></div>
 	<div class="circle">
+	</div>
 	</div>
 </div>
 </body>
