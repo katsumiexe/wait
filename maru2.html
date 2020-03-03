@@ -59,7 +59,7 @@ circle {
 	height		:8px;
 	width		:8px;
 	border-radius:50%;
-	background	:#ffff00;
+	background	:#fffff0;
 	box-shadow	:0px 0px 4px 4px rgba(255,255,255,0.5);
 	z-index		:112;
 }
@@ -216,7 +216,7 @@ $(function(){
 	setInterval(function(){
 		N=N-100;
 		if(N<50) N=100;
-		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
+		$('.point').animate({width:'40px',height:'40px', opacity: 0}, 1000).animate({width:'10px',height:'10px', opacity: 1}, 1);
 	},N);
 
 	$('.line_a').animate({height:'124px'}, 800);
