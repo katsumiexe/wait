@@ -153,8 +153,6 @@
 	box-shadow:
 	 2px 0px 3px 1px rgba(255,255,250,0.9),
 	-2px 0px 3px 1px rgba(255,255,250,0.9);
-
-
 }
 
 .line_e{
@@ -199,6 +197,24 @@
 	 2px 0px 3px 1px rgba(255,255,250,0.9),
 	-2px 0px 3px 1px rgba(255,255,250,0.9);
 }
+
+/*----------------------------------*/
+svg {
+	transform: rotate(-90deg);
+}
+
+circle {
+    fill: transparent;
+    stroke: #ffffe0;
+    stroke-width: 4;
+    animation: circle 2s;
+}
+
+@keyframes circle {
+	0% { stroke-dasharray: 0 377; }
+	99.9%{ stroke-dasharray: 377 377; }
+}
+/*----------------------------------*/
 
 
 </style>
@@ -245,7 +261,13 @@ $(function(){
 <div class="line_f"></div>
 <div class="line_g"></div>
 <div class="point"></div>
-<div class="circle"></div>
+<div class="circle">
+	<svg width="124" height="124">
+		<circle cx="62" cy="62" r="60" />
+	</svg>
+</div>
+
+
 </div>
 </div>
 </div>
