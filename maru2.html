@@ -20,8 +20,8 @@
 	width			:150px;
 	height			:150px;
 
-	box-shadow		:2px 2px 3px 5px rgba(20,20,20,0.4) inset ,
-	-2px -2px 3px 5px rgba(20,20,20,0.4) inset;
+	box-shadow		:2px 2px 3px 5px rgba(20,20,20,0.4) ,
+	-2px -2px 3px 5px rgba(20,20,20,0.4) ;
 
 	border-radius	:50%;
 	background		:linear-gradient(135deg, #bbbbbb, #909090);
@@ -40,7 +40,7 @@
 	height			:120px;
 	background		:linear-gradient(135deg, #00a000, #004000);
 	border			:6px solid #fffff0;
-	box-shadow		:2px 0px 3px 1px rgba(255,255,250,0.9) inset 
+	box-shadow		:2px 0px 3px 1px rgba(255,255,250,0.9) inset, 
 	-2px 0px 3px 1px rgba(255,255,250,0.9) inset;
 
 	z-index			:101;
@@ -205,8 +205,8 @@ $(function(){
 	setInterval(function(){
 		N=N-100;
 		if(N<50) N=100;
-		$('.point').animate({width:'40px',height:'40px', opacity: 0}, 1000).animate({width:'10px',height:'10px', opacity: 1}, 1);
-	},N);
+		$('.point').animate({width:'40px',height:'40px', opacity: 0}, 1000).animate({width:'10px',height:'10px', opacity: 1}, 1).delay(100);
+	},0);
 
 	$('.line_a').animate({height:'124px'}, 800);
 	$('.line_c,.line_b').delay(500).animate({height:'97px'}, 800);
