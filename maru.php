@@ -202,9 +202,6 @@ $(function(){
 		<svg width="124" height="124">
 		  <circle cx="62" cy="62" r="60" />
 		</svg>
-
-
-
 	</div>
 </div>
 
