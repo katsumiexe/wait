@@ -9,6 +9,7 @@
 	width			:110vw;
 	height			:120vh;
 	z-index			:1000;
+	background:rgba(60,60,60,0.5);
 }
 
 .nowloading {
@@ -307,6 +308,27 @@ $(function(){
 		if(N2>120) N2=120;
 		$('.point').animate({width: N2 ,height: N2 , opacity: 0}, N1).animate({width:'5px',height:'5px', opacity: 1}, 1);
 	},0);
+	
+
+	setInterval(function(){
+		$('#ld0').animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld1').delay(200).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld2').delay(400).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld3').delay(600).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld4').delay(800).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld5').delay(1000).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld6').delay(1200).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld7').delay(1400).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld8').delay(1600).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld9').delay(1800).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld10').delay(2000).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld11').delay(2200).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+		$('#ld12').delay(2400).animate({bottom: 10px}, 600).animate({bottom: 5px}, 600);
+
+	},3000);
+
+
+	
 	$('.line_a').delay(1200).show().animate({height:'116px'}, 800);
 	$('.line_c,.line_b').delay(1600).show().animate({height:'90px'}, 800);
 	$('.line_d,.line_e,.line_f').delay(2000).show().animate({height:'56px'}, 500);
