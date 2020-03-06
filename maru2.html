@@ -152,18 +152,18 @@
 	bottom		:0;
 	margin		:auto;
 
-	background	:#fffff0;
+	background	:#000080;
 	border		:1px solid #fffff0;
 	height		:4px;
 	width		:4px;
 	border-radius:50%;
 	box-shadow	:0 0 10px 10px rgba(255,255,255,0.5);
-	z-index		:1006;
+	z-index		:1016;
 }
 
 .line_a{
 	position	:absolute;
-	bottom		:13px;
+	bottom		:17px;
 	left		:0;
 	right		:0;
 	margin		:auto;
@@ -179,7 +179,7 @@
 
 .line_b{
 	position	:absolute;
-	top			:26px;
+	top			:32px;
 	left		:36px;
 	z-index		:1005;
 	height		:0px;
@@ -192,7 +192,7 @@
 
 .line_c{
 	position	:absolute;
-	top			:26px;
+	top			:32px;
 	right		:36px;
 	z-index		:1005;
 	height		:0px;
@@ -303,8 +303,8 @@ $(function(){
 		$('.point').animate({width: N2 ,height: N2 , opacity: 0}, N1).animate({width:'5px',height:'5px', opacity: 1}, 1);
 	},0);
 */
-	$('.line_a').delay(1200).animate({height:'124px'}, 800);
-	$('.line_c,.line_b').delay(1600).animate({height:'97px'}, 800);
+	$('.line_a').delay(1200).animate({height:'116px'}, 800);
+	$('.line_c,.line_b').delay(1600).animate({height:'87px'}, 800);
 	$('.line_d,.line_e,.line_f').delay(2000).animate({height:'60px'}, 500);
 	$('.line_g').delay(2200).animate({width:'78px'}, 600);
 
@@ -327,7 +327,7 @@ $(function(){
 
 <div class="circle">
 	<svg width="120" height="120">
-		<circle cx="60" cy="60" r="57" />
+		<circle cx="60" cy="60" r="58" />
 	</svg>
 </div>
 
