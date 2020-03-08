@@ -318,7 +318,7 @@ $(function(){
 	});
 	setInterval(function(){
 		N1=N1-100;
-		if(N1<100) N1=600;
+		if(N1<400) N1=400;
 		N2=N2+10;
 		if(N2>120) N2=120;
 		$('.point').animate({width: N2 ,height: N2 , opacity: 0}, N1).animate({width:'5px',height:'5px', opacity: 1}, 1);
