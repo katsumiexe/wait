@@ -1,4 +1,5 @@
 .nowloading_back {
+	display			:none;
 	position		:fixed;
 	top				:-5vh;
 	left			:-5vw;
