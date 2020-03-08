@@ -173,7 +173,7 @@ point2{
 	height		:6px;
 	width		:6px;
 	border-radius:50%;
-	box-shadow	:0 0 10px 10px rgba(255,255,250,0.5);
+	box-shadow	:0 0 16px 16px rgba(255,255,250,1);
 	z-index		:1016;
 }
 
@@ -317,7 +317,7 @@ $(function(){
 		$('.cover1').hide();
 	});
 	setInterval(function(){
-		N1=N1-100;*/
+		N1=N1-100;
 		if(N1<100) N1=600;
 		N2=N2+10;
 		if(N2>120) N2=120;
@@ -359,13 +359,11 @@ $(function(){
 <div class="line_g"></div>
 <div class="point"></div>
 <div class="point2"></div>
-
 <div class="circle">
 	<svg width="120" height="120">
 		<circle cx="60" cy="60" r="58" />
 	</svg>
 </div>
-
 </div>
 </div>
 <div id="ld0" class="nowloading_text">U</div>
