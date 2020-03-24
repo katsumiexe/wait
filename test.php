@@ -6,26 +6,6 @@ ini_set('session.gc_divisor', 100);
 ini_set('session.cookie_secure', FALSE);
 ini_set('session.use_only_cookies', TRUE);
 session_start();
-
-if($_POST["start"]){
-    $rnd=array(0,1,2,3,4,5,6,7,8,9,10,11);
-    shuffle($rnd);
-
-    $_SESSION["a"]=$rnd;
-    $dat["a"]=$rnd;
-
-    shuffle($rnd);
-    $_SESSION["b"]=$rnd;
-    $dat["b"]=$rnd;
-
-    shuffle($rnd);
-    $_SESSION["c"]=$rnd;
-    $dat["c"]=$rnd;
-
-    shuffle($rnd);
-    $_SESSION["card"]=$rnd;
-    $dat["card"]=$rnd;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,6 +56,7 @@ if($_POST["start"]){
 .td_b2{
     background:#00f0ff;
 }
+
 .p_name{
     display:inline-block;
     width:200px;
@@ -100,29 +81,34 @@ if($_POST["start"]){
 
 .p_pts_on{
     background:#906000 !important;
-
 }
-
 </style>
-
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
 <script>
+var Turn=0;
 $(function(){ 
-    $(".p_pts_on").on('click',function(){
+    $(".start").on('click',function(){
+		$.post("post_start.php",
+		function(data){
+            $('.td_a').text(Turn);
+		});
+        $('p_pts').addClass('p_pts_on');
+    });
 
+    $(".p_pts_on").on('click',function(){
+        Turn++;
         $(this).removeClass('p_pts_on');
         No=$(this).attr('id').replace('i','');
-
 		$.post("post_read_turn.php",
 			{
 				'turn':Turn,
 				'bet':No,
 			},
 			function(data){
+                $('.td_a').text(Turn);
 			}
 		);
-
     });
 });
 </script>
@@ -145,7 +131,7 @@ $(function(){
 					</td>
 				</tr>
 				<tr>
-					<td class="td_b2"><?for($n=0;$n<12;$n++){?><span id="i<?=$n?>" class="p_pts p_pts_on"></span><?}?></td>
+					<td class="td_b2"><?for($n=0;$n<12;$n++){?><span id="i<?=$n?>" class="p_pts"></span><?}?></td>
 				</tr>
 			</table>
 		</td>

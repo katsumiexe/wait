@@ -1,11 +1,13 @@
 <?
-$turn=$_REQUEST["turn"]
-$bet=$_REQUEST["bet"]
+$turn	=$_REQUEST["turn"];
+$bet	=$_REQUEST["bet"];
 
 $sort["p"]=$bet;
+
 $sort["a"]=$_SESSION["a"][$turn];
 $sort["b"]=$_SESSION["b"][$turn];
 $sort["c"]=$_SESSION["c"][$turn];
+
 $p=0;
 arsort($sort);
 foreach($sort as $a1 => $a2){
@@ -13,6 +15,7 @@ foreach($sort as $a1 => $a2){
     $name[$p]=$a1;
     $p++;
 } 
+
 if($check[0] >$check[1]){
     $win=$name[0];
 
@@ -25,11 +28,8 @@ if($check[0] >$check[1]){
 }else{
     $win="d";
 }
-
-$_SESSION[]
-
 $doll[$win]=$_SESSION["a"]["doll"];
+echo $d;
 
-echo d;
 ?>
 
