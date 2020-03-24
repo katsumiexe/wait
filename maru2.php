@@ -185,8 +185,8 @@ $(function(){
 	setInterval(function(){
 		N=N-100;
 		if(N<50) N=100;
-		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1).delay(1000);
-	},0);
+		$('.point').animate({width:'30px',height:'30px', opacity: 0}, 1000).animate({width:'4px',height:'4px', opacity: 1}, 1);
+	},N);
 
 	$('.line_a').animate({height:'124px'}, 1000);
 	$('.line_c,.line_b').delay(500).animate({height:'94px'}, 1000);
