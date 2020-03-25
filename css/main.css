@@ -3,7 +3,127 @@
     max-width:600px;
     background:#f0f0f0;
     margin:0 auto;    
+	height:95vh;
 }
+
+.page_01{
+
+}
+
+
+.pop_back{
+	display:none;
+	position:fixed;
+	top:-10vh;
+	left:-10vw;
+	width:120vw;
+	height:120vh;
+	background:rgba(60,60,60,0.3);
+}
+.pop_a{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margn:auto;
+	border:3px dashed #fafafa;
+	box-shadow:5px 5px 0px 10px #c09000;
+	border-radius:5px;
+	width:250px;
+}
+
+.pop_a_1{
+	position	:absolute;
+	top			:5px;
+	left		:0;
+	right		:0;
+	margn		:auto;
+	width		:150px
+	height		:150px;
+	background	:#303030;
+}
+
+.pop_a_1{
+	position	:absolute;
+	top			:160px;
+	left		:0;
+	right		:0;
+	margn		:auto;
+	width		:150px
+	height		:50px;
+	line-height	:60px
+	color		:#303030;
+	background	:#fafafa;
+	border-bottom:2px solid #d00000;
+	text-align:left;
+	padding-left:5px;
+}
+
+
+.btn {
+	display			: inline-block;
+	position		: relative;
+	text-decoration	: none;
+	border-radius	: 1vw;
+	text-align		: center;
+	overflow		: hidden;
+	font-size		: 4vw;
+	font-weight		: 700;
+	height			: 8vw;
+	line-height		: 8vw;
+	border			: 1vw solid #ffffff;
+	cursor			: pointer;
+	padding:0;
+}
+
+
+.btn:active {
+	-webkit-transform: translateY(2px);
+	transform: translateY(2px);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	background-image: linear-gradient(#eeeeee 0%, #dddddd 100%);
+}
+
+.c1{
+	background: linear-gradient(#ff90a0 0%, #ffa0a0 100%);
+	text-shadow: 1px 1px 1px rgba(255,255,255, 0.66);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28);
+	color: #d00000;
+	width: 20vw;
+}
+
+.c2{
+	background: linear-gradient(#ddddff 0%, #ccccff 100%);
+	text-shadow: 1px 1px 1px rgba(255,255,255, 0.66);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28);
+	color: #3030ff;
+	width: 20vw;
+}
+
+.c3{
+	background: linear-gradient(#ffd090 0%, #ffc060 100%);
+	text-shadow: 1px 1px 1px rgba(255,255,255, 0.66);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28);
+	color: #909030;
+	width: 12vw;
+}
+
+.c4{
+	background: linear-gradient(#ffd090 0%, #ffc060 100%);
+	text-shadow: 1px 1px 1px rgba(255,255,255, 0.66);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28);
+	color: #909030;
+	width: 20vw;
+}
+
+
+.page_02{
+	display:none;
+}
+
+
 
 .hako{ 
     display:inline-block;
