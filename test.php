@@ -39,6 +39,22 @@
 <?}?>
 </div>
 <div class="page_02">
+
+<?for($e=0;$e<4;$e++){?>
+	<div id="s<?=$e?>" class="player">
+	<span class="player_a"></span>
+	<span class="player_b">
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	</span>
+	<span class="player_c"><?=$unit[$e]["name"]?></span>
+	</div>
+<?}?>
+
+
 <span id="set_a" class="set">0</span>
 <span id="set_b" class="set">0</span>
 <span id="set_c" class="set">0</span>
@@ -71,10 +87,10 @@
 
 <div class="pop_back">
 	<div class="pop_a">
-		<div class="pop_a_1"></div>
+		<div class="pop_a_1"> </div>
 		<div class="pop_a_2">みりあ</div>
 
-		<span class="sel_b">
+		<span class="pop_a_3">
 		<span class="sel_b_1">巨乳</span>
 		<span class="sel_b_1">幼女</span>
 		<span class="sel_b_1">清楚</span>
@@ -82,7 +98,7 @@
 		<span class="sel_b_1">亜人</span>
 		</span>
 
-		<div id="" class="btn c1">取消</div> 
+		<div id="reset" class="btn c1">取消</div> 
 		<div id="start" class="btn c2">選択</div>
 	</div>
 </div>

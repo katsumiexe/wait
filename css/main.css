@@ -1,4 +1,5 @@
 .main{
+	position:relative;;
     width:100%;
     max-width:600px;
     background:#f0f0f0;
@@ -7,7 +8,7 @@
 }
 
 .page_01{
-
+	position:absolute;
 }
 
 
@@ -29,10 +30,10 @@
 	bottom		:0;
 	margin		:auto;
 	border		:3px dashed #fafafa;
-	box-shadow	:5px 5px 0px 10px #c09000;
+	box-shadow	:0px 0px 0px 10px #c09000;
 	border-radius:5px;
 	width		:250px;
-	height		:300px;
+	height		:290px;
 	background	:#c09000;
 }
 
@@ -41,7 +42,7 @@
 	top			:5px;
 	left		:0;
 	right		:0;
-	margn		:auto;
+	margin		:auto;
 	width		:150px;
 	height		:150px;
 	background	:#303030;
@@ -52,15 +53,31 @@
 	top			:160px;
 	left		:0;
 	right		:0;
-	margn		:auto;
-	width		:150px
-	height		:50px;
-	line-height	:60px
+	margin		:auto;
+	width		:150px;
+	height		:30px;
+	line-height	:35px;
 	color		:#303030;
 	background	:#fafafa;
 	border-bottom:2px solid #d00000;
 	text-align:left;
 	padding-left:5px;
+}
+
+.pop_a_3{
+	display			:flex;
+	justify-content	:space-around;
+	align-items		:center;
+	position	:absolute;
+	top			:190px;
+	left		:0;
+	right		:0;
+	margin		:auto;
+
+
+	height			:38px;
+	line-height		:38px;
+	width			:208px;
 }
 
 
@@ -127,6 +144,7 @@
 
 
 .page_02{
+	position:absolute;
 	display:none;
 }
 
@@ -145,7 +163,7 @@
 }
 
 .table_a{
-    width:100%;    
+    width:600px;    
     background:#e0f0ff;
 }
 
@@ -262,4 +280,63 @@
 	width:208px;
 	background:#ff30ff;
 }
+
+
+
+.player{
+	position:relative;
+	display:inline-block;
+	width:298px;
+	border:1px solid #303030;
+	height:70px;
+	background:#ffe0f0;
+	margin:0;
+}
+
+.player_a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:70px;
+	width:70px;
+	background:#303030;
+}
+
+.player_b{
+	display			:flex;
+	justify-content	:space-around;
+	align-items		:center;
+	position		:absolute;
+	top				:20px;
+	left			:70px;
+	height			:50px;
+	line-height		:50px;
+	width			:230px;
+	background		:#3030ff;
+}
+
+.player_b_1{
+	display			:inline-block;
+	height			:26px;
+	line-height		:26px;
+	flex-basis		:37px;
+	background		:#903000;
+	font-size		:13px;
+	border-radius	:3px;
+	color:#fafafa;
+	font-weight:600;
+	text-shadow:1px 1px #303030;
+}
+
+.player_c{
+	display			:inline-block;
+	position		:absolute;
+	top				:0px;
+	left			:70px;
+	height			:20px;
+	line-height		:20px;
+	width			:230px;
+	background		:#ff30ff;
+}
+
 

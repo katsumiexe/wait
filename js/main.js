@@ -58,9 +58,18 @@ $(function(){
 		R++;
     });
 
-	$('.start').on('click',function(){
-		$('.p_pts').addClass('p_pts_on');
+	$('#reset').on('click',function(){
+		$('.pop_back,.pop_a').hide();
 
+    });
+
+	$('#start').on('click',function(){
+
+		$('.pop_back,.pop_a').fadeOut(500);
+		$('.page_01').fadeOut(500);
+		$('.page_02').fadeIn(500);
+
+		$('.p_pts').addClass('p_pts_on');
 		for (i =0; i <40; i++) {
 			Rnd_a = Math.floor( Math.random() * 12);
 			Rnd_b = Math.floor( Math.random() * 12);
