@@ -8,11 +8,11 @@ ini_set('session.use_only_cookies', TRUE);
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 <style>
 .main{
     width:100%;
@@ -82,16 +82,57 @@ session_start();
 .p_pts_on{
     background:#906000 !important;
 }
+.sel{
+	position:relative;
+	display:inline-block;
+	width:280px;
+	border:1px solid #303030;
+	height:80px;
+	background:#ffe0f0;
+	margin:5px;
+}
 
-.set,.sel{
-    display:inline-block;
-    width:90px;
+.set{
+	display:inline-block;
+	width:90px;
 	height:30px;
 	line-height:30px;
 	text-align:right;
-    background:#ffe0f0;
+	background:#ffe0f0;
 	margin:5px;
 }
+
+
+.sel_a{
+	position:absolute;
+	top:2px;
+	left:2px;
+	height:76px;
+	width:76px;
+	background:#303030;
+}
+
+.sel_b{
+	position:absolute;
+	display:flex;
+	top:2px;
+	left:80px;
+	height:28px;
+	width:190px;
+	background:#3030ff;
+
+}
+
+.sel_c{
+	position:absolute;
+	display:inline-box;
+	top:30px;
+	left:80px;
+	height:50px;
+	width:190px;
+	background:#ff30ff;
+}
+
 
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
@@ -248,8 +289,16 @@ $(function(){
 
 <div class="main">
 <div class="start">START</div>
+
 <?for($e=0;$e<10;$e++){?>
-<span id="s<?=$e?>" class="sel"><?=$e?></span>
+	<div id="s<?=$e?>" class="sel">
+	<span class="sel_a"></span>
+	<span class="sel_b"><?=$unit[$e]["name"]?></span>
+	<span class="sel_c"><?=$unit[$e]["name"]?></span>
+	</div>
+
+
+
 <?}?>
 <hr>
 <span id="set_a" class="set">0</span>
