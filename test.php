@@ -49,6 +49,13 @@
 	<span class="player_b_1"></span>
 	<span class="player_b_1"></span>
 	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
+	<span class="player_b_1"></span>
 	</span>
 	<span class="player_c"><?=$unit[$e]["name"]?></span>
 	</div>
