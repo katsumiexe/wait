@@ -20,6 +20,10 @@ var Pts={
 var R=0;
 $(function(){ 
     $('.sel').on('click',function(){
+
+		$('.pop_back,.pop_a').show();
+
+
 		Doll["p"]=$(this).attr('id').replace('s','');
 		for (i =0; i <50; i++) {
 			Rnd_a = Math.floor( Math.random() * 10);

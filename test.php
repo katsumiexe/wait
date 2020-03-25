@@ -13,7 +13,7 @@
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
-<script src="./js/main.js"></script>
+<script src="./js/main.js?_<?=date("YmdHi")?>"></script>
 <script>
 </script>
 </head>
@@ -82,8 +82,8 @@
 		<span class="sel_b_1">亜人</span>
 		</span>
 
-		<div id="no_1" class="btn c1  ps2" style="width:17.5vw;">取消</div> 
-		<div id="p_cheer_del" class="btn c3 ps3">消去</div>
+		<div id="" class="btn c1">取消</div> 
+		<div id="start" class="btn c2">選択</div>
 	</div>
 </div>
 
