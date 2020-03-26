@@ -20,9 +20,6 @@
 <body style="text-align:center">
 
 <div class="main">
-
-
-<div class="start">START</div>
 <div class="page_01">
 <?for($e=0;$e<10;$e++){?>
 	<div id="s<?=$e?>" class="sel">
@@ -40,26 +37,136 @@
 </div>
 <div class="page_02">
 
-<?for($e=0;$e<4;$e++){?>
-	<div id="s<?=$e?>" class="player">
-	<span class="player_a"></span>
-	<span class="player_b">
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	<span class="player_b_1"></span>
-	</span>
-	<span class="player_c"><?=$unit[$e]["name"]?></span>
-	</div>
-<?}?>
+<table class="player_0">
+	<tr>
+		<td class="pl1">
+			<table class="player">
+				<tr>
+					<td rowspan="2" class="player_a"></td>
+					<td class="player_b"></td>
+				</tr>
+				<tr>
+					<td class="player_c">
+						<table class="player_c_0">
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="pl2">
+			<table class="player">
+				<tr>
+					<td rowspan="2" class="player_a"></td>
+					<td class="player_b"></td>
+				</tr>
+				<tr>
+					<td class="player_c">
+						<table class="player_c_0">
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="pl3">
+			<table class="player">
+				<tr>
+					<td rowspan="2" class="player_a"></td>
+					<td class="player_b"></td>
+				</tr>
+				<tr>
+					<td class="player_c">
+						<table class="player_c_0">
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="pl4">
+			<table class="player">
+				<tr>
+					<td rowspan="2" class="player_a"></td>
+					<td class="player_b"></td>
+				</tr>
+				<tr>
+					<td class="player_c">
+						<table class="player_c_0">
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+
+						<tr>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+							<td class="player_c_1"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>	
 
 
 <span id="set_a" class="set">0</span>
