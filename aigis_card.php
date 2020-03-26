@@ -24,15 +24,15 @@ include_once("./library/session.php");
 
 <div class="main">
 <div class="page_01">
-<?for($e=0;$e<10;$e++){?>
+<?for($e=1;$e<11;$e++){?>
 	<div id="s<?=$e?>" class="sel">
 	<span class="sel_a"></span>
 	<span class="sel_b">
-	<span class="sel_b_1">巨乳</span>
-	<span class="sel_b_1">幼女</span>
-	<span class="sel_b_1">清楚</span>
-	<span class="sel_b_1">知的</span>
-	<span class="sel_b_1">亜人</span>
+	<span class="sel_b_1 <?if($unit[$e]["status_1"]==1){?>sel_on<?}?>"><?=$status[1]["name"]?></span>
+	<span class="sel_b_1 <?if($unit[$e]["status_2"]==1){?>sel_on<?}?>"><?=$status[2]["name"]?></span>
+	<span class="sel_b_1 <?if($unit[$e]["status_3"]==1){?>sel_on<?}?>"><?=$status[3]["name"]?></span>
+	<span class="sel_b_1 <?if($unit[$e]["status_4"]==1){?>sel_on<?}?>"><?=$status[4]["name"]?></span>
+	<span class="sel_b_1 <?if($unit[$e]["status_5"]==1){?>sel_on<?}?>"><?=$status[5]["name"]?></span>
 	</span>
 	<span class="sel_c"><?=$unit[$e]["name"]?></span>
 	</div>

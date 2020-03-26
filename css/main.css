@@ -252,8 +252,6 @@
 	height			:38px;
 	line-height		:38px;
 	width			:208px;
-	background		:#3030ff;
-
 }
 
 
@@ -263,7 +261,7 @@
 	height			:26px;
 	line-height		:26px;
 	flex-basis		:37px;
-	background		:#903000;
+	background		:linear-gradient(#d0d0d0,#c0c0c0);
 	font-size		:13px;
 	border-radius	:3px;
 	color:#fafafa;
@@ -271,6 +269,10 @@
 	text-shadow:1px 1px #303030;
 }
 
+.sel_on{
+	background		:linear-gradient(#0000ff,#0000d0);
+
+}
 
 .sel_c{
 	position:absolute;
@@ -279,7 +281,6 @@
 	left:80px;
 	height:38px;
 	width:208px;
-	background:#ff30ff;
 }
 
 .player{
