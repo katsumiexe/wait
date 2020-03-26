@@ -1,4 +1,7 @@
-<?
+<?php
+$page_index="top";
+include_once("./library/session.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
