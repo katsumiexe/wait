@@ -26,7 +26,7 @@ include_once("./library/session.php");
 <div class="page_01">
 <?for($e=1;$e<11;$e++){?>
 	<div id="s<?=$e?>" class="sel">
-	<span class="sel_a"></span>
+	<img src="./img/unit/unit_<?=$e?>.png" class="sel_a">
 	<span class="sel_b">
 	<span class="sel_b_1 <?if($unit[$e]["status_1"]==1){?>sel_on<?}?>"><?=$status[1]["name"]?></span>
 	<span class="sel_b_1 <?if($unit[$e]["status_2"]==1){?>sel_on<?}?>"><?=$status[2]["name"]?></span>
@@ -96,15 +96,10 @@ include_once("./library/session.php");
 
 <div class="pop_back">
 	<div class="pop_a">
-		<div class="pop_a_1"> </div>
+		<img src="" class="pop_a_1">
 		<div class="pop_a_2">みりあ</div>
 
 		<span class="pop_a_3">
-		<span class="sel_b_1">巨乳</span>
-		<span class="sel_b_1">幼女</span>
-		<span class="sel_b_1">清楚</span>
-		<span class="sel_b_1">知的</span>
-		<span class="sel_b_1">亜人</span>
 		</span>
 
 		<div id="reset" class="btn c1">取消</div> 

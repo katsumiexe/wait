@@ -23,8 +23,16 @@ $(function(){
 
 		$('.pop_back,.pop_a').show();
 
+		Img=$(this).children('.sel_a').attr('src');
+		Sel=$(this).children('.sel_b').html();
+		Name=$(this).children('.sel_c').html();
+
+		$('.pop_a_3').html(Sel);
+		$('.pop_a_2').html(Name);
+		$('.pop_a_1').attr('src',Img);
 
 		Doll["p"]=$(this).attr('id').replace('s','');
+
 		for (i =0; i <50; i++) {
 			Rnd_a = Math.floor( Math.random() * 10);
 			Rnd_b = Math.floor( Math.random() * 10);

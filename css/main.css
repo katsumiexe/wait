@@ -80,6 +80,12 @@
 }
 
 
+
+
+
+
+
+
 .btn {
 	display			: inline-block;
 	text-decoration	: none;
@@ -229,7 +235,7 @@
 	width:290px;
 	border:1px solid #303030;
 	height:80px;
-	background:#ffe0f0;
+	background		:linear-gradient(45deg,#fafafa,#ffc0e0);
 	margin:2px;
 }
 
@@ -261,7 +267,7 @@
 	height			:26px;
 	line-height		:26px;
 	flex-basis		:37px;
-	background		:linear-gradient(#d0d0d0,#c0c0c0);
+	background		:linear-gradient(#c0c0c0,#b0b0b0);
 	font-size		:13px;
 	border-radius	:3px;
 	color:#fafafa;
@@ -280,7 +286,13 @@
 	top:40px;
 	left:80px;
 	height:38px;
+	line-height:40px;
 	width:208px;
+	font-weight:700;
+	color:#303030;
+	text-shadow:1px 1px #fafafa;
+	font-size:20px;
+	text-align:left;
 }
 
 .player{
