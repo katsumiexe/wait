@@ -70,6 +70,7 @@ $card[1]="";
 					<span class="get_icon"><?=$card[1]?></span>
 					<span id="count_a" class="get_count">0</span>
 				</div>
+				<div id="down_a" class="player_d">▼</div>
 				<div id="set_a" class="player_c"></div>
 			</td>
 			<td class="player_0 pl2">
@@ -80,6 +81,7 @@ $card[1]="";
 					<span class="get_icon"><?=$card[1]?></span>
 					<span id="count_b" class="get_count">0</span>
 				</div>
+				<div id="down_b" class="player_d">▼</div>
 				<div id="set_b" class="player_c"></div>
 			</td>
 			<td class="player_0 pl3">
@@ -90,6 +92,7 @@ $card[1]="";
 					<span class="get_icon"><?=$card[1]?></span>
 					<span id="count_c" class="get_count">0</span>
 				</div>
+				<div id="down_c" class="player_d">▼</div>
 				<div id="set_c" class="player_c"></div>
 			</td>
 			<td class="player_0 pl4">
@@ -100,6 +103,7 @@ $card[1]="";
 					<span class="get_icon"><?=$card[1]?></span>
 					<span id="count_d" class="get_count">0</span>
 				</div>
+				<div id="down_d" class="player_d">▼</div>
 				<div id="set_d" class="player_c"></div>
 			</td>
 
