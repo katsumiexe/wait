@@ -17,7 +17,7 @@ $item[3]="";
 $item[2]="";
 $item[1]="";
 
-$check[1]="";
+$check[1]="";
 $check[2]="";
 
 $card[1]="";
@@ -64,22 +64,42 @@ $card[1]="";
 		<tr>
 			<td class="player_0 pl1">
 				<div class="player_a"></div>
-				<div class="player_b pl1"></div>
+				<span id="sub_a" class="get_sub"><?=$check[1]?></span>
+				<span id="ring_a" class="get_ring"><?=$check[2]?></span>
+				<div class="player_b pl1">
+					<span class="get_icon"><?=$card[1]?></span>
+					<span id="count_a" class="get_count">0</span>
+				</div>
 				<div id="set_a" class="player_c"></div>
 			</td>
 			<td class="player_0 pl2">
 				<div class="player_a"></div>
-				<div class="player_b pl2"></div>
+				<span id="sub_b" class="get_sub"><?=$check[1]?></span>
+				<span id="ring_b" class="get_ring"><?=$check[2]?></span>
+				<div class="player_b pl2">
+					<span class="get_icon"><?=$card[1]?></span>
+					<span id="count_b" class="get_count">0</span>
+				</div>
 				<div id="set_b" class="player_c"></div>
 			</td>
 			<td class="player_0 pl3">
 				<div class="player_a"></div>
-				<div class="player_b pl3"></div>
+				<span id="sub_c" class="get_sub"><?=$check[1]?></span>
+				<span id="ring_c" class="get_ring"><?=$check[2]?></span>
+				<div class="player_b pl3">
+					<span class="get_icon"><?=$card[1]?></span>
+					<span id="count_c" class="get_count">0</span>
+				</div>
 				<div id="set_c" class="player_c"></div>
 			</td>
 			<td class="player_0 pl4">
 				<div class="player_a"></div>
-				<div class="player_b pl4"></div>
+				<span id="sub_d" class="get_sub"><?=$check[1]?></span>
+				<span id="ring_d" class="get_ring"><?=$check[2]?></span>
+				<div class="player_b pl4">
+					<span class="get_icon"><?=$card[1]?></span>
+					<span id="count_d" class="get_count">0</span>
+				</div>
 				<div id="set_d" class="player_c"></div>
 			</td>
 
@@ -101,9 +121,7 @@ $card[1]="";
 <span id="rest9" class="rest_card"></span>
 <span id="rest10" class="rest_card"></span>
 <span id="rest11" class="rest_card"></span>
-
 <div class="main_card">
-
 </div>
 <div class="turn_start">
 START

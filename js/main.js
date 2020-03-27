@@ -21,7 +21,6 @@ var Pts={
 var R=0;
 $(function(){ 
     $('.sel').on('click',function(){
-
 		$('.pop_back,.pop_a').show();
 		Img=$(this).children('.sel_a').attr('src');
 		Sel=$(this).children('.sel_b').html();
@@ -149,27 +148,37 @@ $(function(){
 				'data_d':Up_d[Turn],
 				'data_e':Up_e[Turn],
 
-				'doll_a':Doll['a'],
-				'doll_b':Doll['b'],
-				'doll_c':Doll['c'],
-				'doll_d':Doll['d'],
-				'doll_p':Doll['p'],
+				'unit_a':Doll['a'],
+				'unit_b':Doll['b'],
+				'unit_c':Doll['c'],
+				'unit_d':Doll['d'],
+				'unit_p':Doll['p'],
 			},
 		}).done(function(data2, textStatus, jqXHR){
 			Pts[data2.z]=parseInt(Pts[data2.z])+parseInt(data2.pts);
 
             $('#set_z').text(data2.z);
+
 			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[data2.a]);
-			$('#set_b').delay(200).animate({'top':'150px'},500).text(Items[data2.b]);
-			$('#set_c').delay(200).animate({'top':'150px'},500).text(Items[data2.c]);
-			$('#set_d').delay(200).animate({'top':'150px'},500).text(Items[data2.d]);
+			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[data2.b]);
+			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[data2.c]);
+			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[data2.d]);
 	
 
+			Tmp=$('count_'+data2.z).text();
+			Tmp=parseInt(Tmp) + 1;
+			$('count_'+data2.z).text(Tmp);
+
+			if(data2.v){
+				$('#sub_' + data2.z).addClass('sub_on');
+			}
+			
+			if(data2.w){
+				$('#ring_' + data2.z).addClass('ring_on');
+			}
             $('.td_a').text(Turn);
-
-			console.log(data2.pts);
-			console.log(Pts);
-
+			console.log(data2);
+	
 		});
         Turn++;
     });
