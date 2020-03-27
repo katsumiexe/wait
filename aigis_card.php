@@ -1,6 +1,5 @@
 <?php
-$page_index="top";
-include_once("./library/session.php");
+/*include_once("./library/session.php");*/
 
 ?>
 <!DOCTYPE html>
@@ -21,12 +20,11 @@ include_once("./library/session.php");
 </script>
 </head>
 <body style="text-align:center">
-
 <div class="main">
 <div class="page_01">
 <?for($e=1;$e<11;$e++){?>
 	<div id="s<?=$e?>" class="sel">
-	<img src="./img/unit/unit_<?=$e?>.png" class="sel_a">
+	<img src="./img/unit/unit_0.png" class="sel_a">
 	<span class="sel_b">
 	<span class="sel_b_1 <?if($unit[$e]["status_1"]==1){?>sel_on<?}?>"><?=$status[1]["name"]?></span>
 	<span class="sel_b_1 <?if($unit[$e]["status_2"]==1){?>sel_on<?}?>"><?=$status[2]["name"]?></span>
@@ -63,7 +61,6 @@ include_once("./library/session.php");
 			</td>
 		</tr>
 	</table>
-
 <span id="set_a" class="set">0</span>
 <span id="set_b" class="set">0</span>
 <span id="set_c" class="set">0</span>
