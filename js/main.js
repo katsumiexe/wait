@@ -133,6 +133,17 @@ $(function(){
 		$('.main_card').delay(500).fadeIn(0).text(Up_e[Turn]);
     });
 
+
+	$('.player_d').on('click',function(){
+		Tmp_Id=$(this).attr('id')+'1';
+		$('#'+Tmp_Id).slideUp(300).animate({'top':'110px'},100);		
+
+		if($('#'+Tmp_Id).css("display") == 'none'){
+			$('#'+Tmp_Id).slideDown(300).animate({'top':'140px'},100);		
+		
+		}
+    });
+
     $('.td_b2').on('click','.p_pts_on',function(){
         $(this).removeClass('p_pts_on');
         No=$(this).attr('id').replace('i','');
