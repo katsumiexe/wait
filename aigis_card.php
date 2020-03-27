@@ -1,6 +1,27 @@
 <?php
 /*include_once("./library/session.php");*/
 
+$item[12]="";
+$item[11]="";
+$item[10]="";
+
+$item[9]="";
+$item[8]="";
+$item[7]="";
+
+$item[6]="";
+$item[5]="";
+$item[4]="";
+
+$item[3]="";
+$item[2]="";
+$item[1]="";
+
+$check[1]="";
+$check[2]="";
+
+$card[1]="";
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -20,6 +41,7 @@
 </script>
 </head>
 <body style="text-align:center">
+
 <div class="main">
 <div class="page_01">
 <?for($e=1;$e<11;$e++){?>
@@ -36,24 +58,29 @@
 	</div>
 <?}?>
 </div>
+
 <div class="page_02">
 	<table class="player">
 		<tr>
 			<td class="player_0 pl1">
 				<div class="player_a"></div>
-				<div class="player_b"></div>
+				<div class="player_b pl1"></div>
+				<div id="set_a" class="player_c"></div>
 			</td>
 			<td class="player_0 pl2">
 				<div class="player_a"></div>
-				<div class="player_b"></div>
+				<div class="player_b pl2"></div>
+				<div id="set_b" class="player_c"></div>
 			</td>
 			<td class="player_0 pl3">
 				<div class="player_a"></div>
-				<div class="player_b"></div>
+				<div class="player_b pl3"></div>
+				<div id="set_c" class="player_c"></div>
 			</td>
 			<td class="player_0 pl4">
 				<div class="player_a"></div>
-				<div class="player_b"></div>
+				<div class="player_b pl4"></div>
+				<div id="set_d" class="player_c"></div>
 			</td>
 
 			<td class="player_0 pl5">
@@ -61,11 +88,26 @@
 			</td>
 		</tr>
 	</table>
-<span id="set_a" class="set">0</span>
-<span id="set_b" class="set">0</span>
-<span id="set_c" class="set">0</span>
-<span id="set_d" class="set">0</span>
-<span id="set_z" class="set">0</span>
+
+<span id="rest0" class="rest_card"></span>
+<span id="rest1" class="rest_card"></span>
+<span id="rest2" class="rest_card"></span>
+<span id="rest3" class="rest_card"></span>
+<span id="rest4" class="rest_card"></span>
+<span id="rest5" class="rest_card"></span>
+<span id="rest6" class="rest_card"></span>
+<span id="rest7" class="rest_card"></span>
+<span id="rest8" class="rest_card"></span>
+<span id="rest9" class="rest_card"></span>
+<span id="rest10" class="rest_card"></span>
+<span id="rest11" class="rest_card"></span>
+
+<div class="main_card">
+
+</div>
+<div class="turn_start">
+START
+</div>
 <table class="table_a">
 	<tr>
 		<td class="td_a">あ</td>
@@ -82,7 +124,13 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="td_b2"><?for($n=0;$n<12;$n++){?><span id="i<?=$n?>" class="p_pts"></span><?}?></td>
+					<td class="td_b2">
+						<?for($s=12;$s>0;$s--){?>
+						<span id="i<?=$s?>" class="p_pts">
+						<span class="p_pts_icon"><?=$item[$s]?></span>
+						</span>
+						<?}?>
+					</td>
 				</tr>
 			</table>
 		</td>
@@ -90,6 +138,9 @@
 </table>
 </div>
 </div>
+
+
+
 
 <div class="pop_back">
 	<div class="pop_a">

@@ -2,6 +2,7 @@ var Turn=0;
 var St=[];
 var Doll=[];
 var Rand=[0,1,2,3,4,5,6,7,8,9,];
+var Items=["","","","","","","","","","","",""];
 var St_Rand1=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand2=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand3=[0,1,2,3,4,5,6,7,8,9,10,11];
@@ -22,7 +23,6 @@ $(function(){
     $('.sel').on('click',function(){
 
 		$('.pop_back,.pop_a').show();
-
 		Img=$(this).children('.sel_a').attr('src');
 		Sel=$(this).children('.sel_b').html();
 		Name=$(this).children('.sel_c').html();
@@ -68,11 +68,10 @@ $(function(){
 
 	$('#reset').on('click',function(){
 		$('.pop_back,.pop_a').hide();
-
     });
 
-	$('#start').on('click',function(){
 
+	$('#start').on('click',function(){
 		$('.pop_back,.pop_a').fadeOut(500);
 		$('.page_01').fadeOut(500);
 		$('.page_02').fadeIn(500);
@@ -123,17 +122,21 @@ $(function(){
 		}
 		Up_e=St_Rand5;
 
-			console.log(Up_a)
-			console.log(Up_b)
-			console.log(Up_c)
-			console.log(Up_d)
-			console.log(Up_e)
+		console.log(Up_a)
+		console.log(Up_b)
+		console.log(Up_c)
+		console.log(Up_d)
+		console.log(Up_e)
 	});
+
+	$('.turn_start').on('click',function(){
+		$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},500).delay(500).fadeOut(500);
+		$('.main_card').delay(500).fadeIn(0).text(Up_e[Turn]);
+    });
 
     $('.td_b2').on('click','.p_pts_on',function(){
         $(this).removeClass('p_pts_on');
         No=$(this).attr('id').replace('i','');
-
 		$.post({
 			url:'post_read_turn.php',
 			dataType: 'json',
@@ -145,15 +148,23 @@ $(function(){
 				'data_c':Up_c[Turn],
 				'data_d':Up_d[Turn],
 				'data_e':Up_e[Turn],
+
+				'doll_a':Doll['a'],
+				'doll_b':Doll['b'],
+				'doll_c':Doll['c'],
+				'doll_d':Doll['d'],
+				'doll_p':Doll['p'],
 			},
 		}).done(function(data2, textStatus, jqXHR){
 			Pts[data2.z]=parseInt(Pts[data2.z])+parseInt(data2.pts);
 
             $('#set_z').text(data2.z);
-            $('#set_a').text(data2.a +'□'+Pts['a']);
-            $('#set_b').text(data2.b +'□'+Pts['b']);
-            $('#set_c').text(data2.c +'□'+Pts['c']);
-            $('#set_d').text(data2.d +'□'+Pts['d']);
+			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[data2.a]);
+			$('#set_b').delay(200).animate({'top':'150px'},500).text(Items[data2.b]);
+			$('#set_c').delay(200).animate({'top':'150px'},500).text(Items[data2.c]);
+			$('#set_d').delay(200).animate({'top':'150px'},500).text(Items[data2.d]);
+	
+
             $('.td_a').text(Turn);
 
 			console.log(data2.pts);
@@ -162,4 +173,5 @@ $(function(){
 		});
         Turn++;
     });
+
 });
