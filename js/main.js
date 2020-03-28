@@ -81,7 +81,6 @@ $(function(){
 		$('.pop_back,.pop_a').hide();
     });
 
-
 	$('#start').on('click',function(){
 		$('.pop_back,.pop_a').fadeOut(500);
 		$('.page_01').fadeOut(500);
@@ -146,13 +145,14 @@ $(function(){
 	});
 
 	$('.turn_start').on('click',function(){
+		$('.guard').hide();
+			
 		$('.player_c').animate({'top':'110px'},100);
 		$('.player_e').slideUp(100).animate({'top':'110px'},0);		
 
 		$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},500).delay(500).fadeOut(500);
 		$('.main_card').delay(500).fadeIn(0).text(Up['e'][Turn]);
     });
-
 
 	$('.player_d').on('click',function(){
 		Tmp_Id=$(this).attr('id')+'1';
@@ -174,6 +174,7 @@ $(function(){
     });
 
     $('.td_b2').on('click','.p_pts_on',function(){
+		$('.guard').show();
         $(this).removeClass('p_pts_on');
         No=$(this).attr('id').replace('i','');
 		$.post({
@@ -195,8 +196,18 @@ $(function(){
 				'unit_p':Doll['p'],
 			},
 		}).done(function(data2, textStatus, jqXHR){
-			Pts[data2.z]=parseInt(Pts[data2.z])+parseInt(data2.pts);
+			Pts[data2.z]=parseFloat(Pts[data2.z])+parseFloat(data2.pts);
 			Cnt[data2.z]++;
+
+			if(data2.ring==2){
+				 $('#sub_' + data2.z).css('color','#ff90a0');
+
+			}else if(data2.ring==1){
+				 $('#ring_' + data2.z).css('color','#ff90a0');
+			}
+
+            $('.main_card').html(data2.cord);
+
 
             $('#count_a').text(Cnt['a']);
             $('#count_b').text(Cnt['b']);
@@ -207,9 +218,9 @@ $(function(){
             $('.pl2').children('.player_a').text(Pts['b']);
             $('.pl3').children('.player_a').text(Pts['c']);
             $('.pl4').children('.player_a').text(Pts['d']);
+            $('.td_a').text(Pts['p']);
 
             $('#set_z').text(data2.z);
-            $('.td_a').text(Turn);
 
 			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[Up['a'][Turn]]);
 			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[Up['b'][Turn]]);
@@ -217,19 +228,30 @@ $(function(){
 			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[Up['d'][Turn]]);
 
 			Tmp=$('count_'+data2.z).text();
-			Tmp=parseInt(Tmp) + 1;
+			Tmp=parseFloat(Tmp) + 1;
 			$('count_'+data2.z).text(Tmp);
 
-			if(data2.v){
-				$('#sub_' + data2.z).addClass('sub_on');
+			if(data2.z=='p'){
+				$('.main_card').delay(2000).animate({'top':'90vh','right':'550px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+			}else if(data2.z=='a'){
+				$('.main_card').delay(2000).animate({'top':'50px','right':'540px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+
+			}else if(data2.z=='b'){
+				$('.main_card').delay(2000).animate({'top':'50px','right':'420px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+
+			}else if(data2.z=='c'){
+				$('.main_card').delay(2000).animate({'top':'50px','right':'300px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+
+			}else if(data2.z=='d'){
+				$('.main_card').delay(2000).animate({'top':'50px','right':'180px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+
+			}else if(data2.z=='l'){
+				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
 			}
-			
-			if(data2.w){
-				$('#ring_' + data2.z).addClass('ring_on');
-			}
+
 			console.log(data2);
 			console.log(Turn);
-	      Turn++;
+			Turn++;
 		});
     });
 });

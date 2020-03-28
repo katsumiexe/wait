@@ -105,10 +105,12 @@ if($unit_data[$unit[$win]][0] == $card || $unit_data[$unit[$win]][1] == $card){
 	$sort["pts"]=(-2);
 
 }elseif($card==0){
-	$sort["pts"]=4;
+	$sort["pts"]=3.2;
+	$sort["ring"]=2;
 
 }elseif($card==1){
-	$sort["pts"]=3;
+	$sort["pts"]=2.1;
+	$sort["ring"]=1;
 	
 }elseif($card<7){
 	$sort["pts"]=1;
@@ -116,7 +118,6 @@ if($unit_data[$unit[$win]][0] == $card || $unit_data[$unit[$win]][1] == $card){
 }else{
 	$sort["pts"]=2;
 }
-
 
 echo json_encode($sort);
 ?>

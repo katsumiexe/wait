@@ -181,8 +181,7 @@ $card[1]="";
 <span id="rest9" class="rest_card"></span>
 <span id="rest10" class="rest_card"></span>
 <span id="rest11" class="rest_card"></span>
-<div class="main_card">
-</div>
+<div class="main_card"></div>
 <div class="turn_start">
 START
 </div>
@@ -203,6 +202,7 @@ START
 				</tr>
 				<tr>
 					<td class="td_b2">
+						<div class="guard"></div>
 						<?for($s=11;$s>-1;$s--){?>
 						<span id="i<?=$s?>" class="p_pts">
 						<span class="p_pts_icon"><?=$item[$s]?></span>
@@ -216,9 +216,6 @@ START
 </table>
 </div>
 </div>
-
-
-
 
 <div class="pop_back">
 	<div class="pop_a">

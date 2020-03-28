@@ -166,9 +166,8 @@
 	position:absolute;
 	height:95vh;
 	display:none;
+	oveflow:hidden;
 }
-
-
 
 .hako{ 
     display:inline-block;
@@ -186,7 +185,7 @@
 	position:absolute;
 	bottom:0;
     width:600px;    
-    background:#e0f0ff;
+    background:#fafafa;
 }
 
 .td_a{
@@ -201,13 +200,21 @@
 
 .td_b1{
     height:30px;    
-    background:#00f020;
 }
 
 .td_b2{
-    background:#00f0ff;
+	position:rilative;
 	font-size:0;
 }
+
+.guard{
+	position	:absolute;
+	width		:466px;		
+	height		:74px;		
+	z-index		:100;
+
+}
+	
 
 .p_name{
     display:inline-block;
@@ -258,21 +265,21 @@
 }
 
 .sel{
-	position:relative;
-	display:inline-block;
-	width:290px;
-	border:1px solid #303030;
-	height:80px;
+	position		:relative;
+	display			:inline-block;
+	width			:290px;
+	height			:80px;
+	margin			:2px;
+	border			:1px solid #303030;
 	background		:linear-gradient(45deg,#fafafa,#ffc0e0);
-	margin:2px;
 }
 
 .sel_a{
-	position:absolute;
-	top:2px;
-	left:2px;
-	height:76px;
-	width:76px;
+	position		:absolute;
+	top				:2px;
+	left			:2px;
+	height			:76px;
+	width			:76px;
 	background:#303030;
 }
 
@@ -513,7 +520,6 @@
 	border-radius	:4px;
 	background		:#fa9030;
 	text-align		:center;	
-
 }
 
 .main_card{
@@ -524,10 +530,61 @@
 	width			:240px;
 	height			:360px;
 	border			:10px solid #ee0000;
+	overflow		:hidden;
 	border-radius	:20px;
 	background		:#cccccc;
-
+	z-index			:100;
 }
+
+.turn_name{
+	position:absolute;
+	top:20px;
+	left:20px;
+	font-size:20ps;
+	font-weight:700;
+	color:#906000;
+}
+
+.turn_img{
+	position:absolute;
+	top:50px;
+	left:20px;
+	width:200px;
+	height:200px;	
+}
+
+.turn_comm{
+	position:absolute;
+	top:260px;
+	left:20px;
+	width:200px;
+	height:40px;
+	border:1px solid #fff0e0;
+	font-size:14px;
+}
+
+.turn_pta{
+	position:absolute;
+	top:310px;
+	left:120px;
+	width:60px;
+}
+
+.turn_ptb{
+	position:absolute;
+	top:310px;
+	left:180px;
+	width:60px;
+}
+
+.turn_ptc{
+	position:absolute;
+	top:310px;
+	left:180px;
+	width:60px;
+}
+
+
 
 .rest_card{
 	position		:absolute;
@@ -542,61 +599,61 @@
 
 #rest11{
 	top:160px;
-	z-index:1;
+	z-index:101;
 }
 
 #rest10{
 	top:180px;
-	z-index:2;
+	z-index:102;
 }
 
 #rest9{
 	top:200px;
-	z-index:3;
+	z-index:103;
 }
 
 #rest8{
 	top:220px;
-	z-index:4;
+	z-index:104;
 }
 
 #rest7{
 	top:240px;
-	z-index:5;
+	z-index:105;
 }
 
 #rest6{
 	top:260px;
-	z-index:6;
+	z-index:106;
 }
 
 #rest5{
 	top:280px;
-	z-index:7;
+	z-index:107;
 }
 
 #rest4{
 	top:300px;
-	z-index:8;
+	z-index:108;
 }
 
 #rest3{
 	top:320px;
-	z-index:9;
+	z-index:109;
 }
 
 #rest2{
 	top:340px;
-	z-index:10;
+	z-index:110;
 }
 
 #rest1{
 	top:360px;
-	z-index:11;
+	z-index:111;
 }
 
 #rest0{
 	top:380px;
-	z-index:12;
+	z-index:112;
 }
 
