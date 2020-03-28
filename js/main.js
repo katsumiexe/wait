@@ -2,13 +2,25 @@ var Turn=0;
 var St=[];
 var Doll=[];
 var Rand=[0,1,2,3,4,5,6,7,8,9,];
-var Items=["","","","","","","","","","","",""];
+
+
+var Items=["","","","","","","","","","","",""];
+
+
 var St_Rand1=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand2=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand3=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand4=[0,1,2,3,4,5,6,7,8,9,10,11];
 var St_Rand5=[0,1,2,3,4,5,6,7,8,9,10,11];
-
+var Up=[];
+var Cnt={
+		"a": 0,
+		"b": 0,
+		"c": 0,
+		"d": 0,
+		"e": 0,
+		"p": 0
+};
 var Pts={
 		"a": 0,
 		"b": 0,
@@ -83,7 +95,7 @@ $(function(){
 			St_Rand1[Rnd_a]=St_Rand1[Rnd_b];
 			St_Rand1[Rnd_b]=Tmp;
 		}
-		Up_a=St_Rand1;
+		Up['a']=St_Rand1;
 
 		for (i =0; i <30; i++) {
 			Rnd_a = Math.floor( Math.random() * 12);
@@ -92,7 +104,7 @@ $(function(){
 			St_Rand2[Rnd_a]=St_Rand2[Rnd_b];
 			St_Rand2[Rnd_b]=Tmp;
 		}
-		 Up_b=St_Rand2;
+		 Up['b']=St_Rand2;
 
 		for (i =0; i <20; i++) {
 			Rnd_a = Math.floor( Math.random() * 12);
@@ -101,7 +113,7 @@ $(function(){
 			St_Rand3[Rnd_a]=St_Rand3[Rnd_b];
 			St_Rand3[Rnd_b]=Tmp;
 		}
-		Up_c=St_Rand3;
+		Up['c']=St_Rand3;
 
 		for (i =0; i <45; i++) {
 			Rnd_a = Math.floor( Math.random() * 12);
@@ -110,7 +122,7 @@ $(function(){
 			St_Rand4[Rnd_a]=St_Rand4[Rnd_b];
 			St_Rand4[Rnd_b]=Tmp;
 		}
-		Up_d=St_Rand4;
+		Up['d']=St_Rand4;
 
 		for (i =0; i <35; i++) {
 			Rnd_a = Math.floor( Math.random() * 12);
@@ -119,28 +131,45 @@ $(function(){
 			St_Rand5[Rnd_a]=St_Rand5[Rnd_b];
 			St_Rand5[Rnd_b]=Tmp;
 		}
-		Up_e=St_Rand5;
+		Up['e']=St_Rand5;
 
-		console.log(Up_a)
-		console.log(Up_b)
-		console.log(Up_c)
-		console.log(Up_d)
-		console.log(Up_e)
+		console.log(Doll['a']);
+		console.log(Doll['b']);
+		console.log(Doll['c']);
+		console.log(Doll['d']);
+
+		console.log(Up['a']);
+		console.log(Up['b']);
+		console.log(Up['c']);
+		console.log(Up['d']);
+		console.log(Up['e']);
 	});
 
 	$('.turn_start').on('click',function(){
+		$('.player_c').animate({'top':'110px'},100);
+		$('.player_e').slideUp(100).animate({'top':'110px'},0);		
+
 		$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},500).delay(500).fadeOut(500);
-		$('.main_card').delay(500).fadeIn(0).text(Up_e[Turn]);
+		$('.main_card').delay(500).fadeIn(0).text(Up['e'][Turn]);
     });
 
 
 	$('.player_d').on('click',function(){
 		Tmp_Id=$(this).attr('id')+'1';
-		$('#'+Tmp_Id).slideUp(300).animate({'top':'110px'},100);		
+		Tmp_No=$(this).attr('id').replace('down_','');
+		$('.f'+Tmp_No).css('color','#e0e0e0');		
+
+		$('.player_c').animate({'top':'110px'},100);
+
 
 		if($('#'+Tmp_Id).css("display") == 'none'){
-			$('#'+Tmp_Id).slideDown(300).animate({'top':'140px'},100);		
-		
+			for(i=Turn ;i<12;i++){
+				$(this).next().children('.f'+Up[Tmp_No][i]).css('color','#906000');		
+			}
+			$('#'+Tmp_Id).animate({'top':'145px'},0).slideDown(200);		
+
+		}else{
+			$('#'+Tmp_Id).animate({'top':'110px'},0).slideUp(150);		
 		}
     });
 
@@ -153,11 +182,11 @@ $(function(){
 			data:{
 				'turn':Turn,
 				'bet':No,
-				'data_a':Up_a[Turn],
-				'data_b':Up_b[Turn],
-				'data_c':Up_c[Turn],
-				'data_d':Up_d[Turn],
-				'data_e':Up_e[Turn],
+				'data_a':Up['a'][Turn],
+				'data_b':Up['b'][Turn],
+				'data_c':Up['c'][Turn],
+				'data_d':Up['d'][Turn],
+				'data_e':Up['e'][Turn],
 
 				'unit_a':Doll['a'],
 				'unit_b':Doll['b'],
@@ -167,14 +196,25 @@ $(function(){
 			},
 		}).done(function(data2, textStatus, jqXHR){
 			Pts[data2.z]=parseInt(Pts[data2.z])+parseInt(data2.pts);
+			Cnt[data2.z]++;
+
+            $('#count_a').text(Cnt['a']);
+            $('#count_b').text(Cnt['b']);
+            $('#count_c').text(Cnt['c']);
+            $('#count_d').text(Cnt['d']);
+
+            $('.pl1').children('.player_a').text(Pts['a']);
+            $('.pl2').children('.player_a').text(Pts['b']);
+            $('.pl3').children('.player_a').text(Pts['c']);
+            $('.pl4').children('.player_a').text(Pts['d']);
 
             $('#set_z').text(data2.z);
+            $('.td_a').text(Turn);
 
-			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[data2.a]);
-			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[data2.b]);
-			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[data2.c]);
-			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[data2.d]);
-	
+			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[Up['a'][Turn]]);
+			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[Up['b'][Turn]]);
+			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[Up['c'][Turn]]);
+			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[Up['d'][Turn]]);
 
 			Tmp=$('count_'+data2.z).text();
 			Tmp=parseInt(Tmp) + 1;
@@ -187,11 +227,9 @@ $(function(){
 			if(data2.w){
 				$('#ring_' + data2.z).addClass('ring_on');
 			}
-            $('.td_a').text(Turn);
 			console.log(data2);
-	
+			console.log(Turn);
+	      Turn++;
 		});
-        Turn++;
     });
-
 });

@@ -1,21 +1,21 @@
 <?php
 /*include_once("./library/session.php");*/
 
-$item[12]="";
-$item[11]="";
-$item[10]="";
+$item[11]="";
+$item[10]="";
+$item[9]="";
 
-$item[9]="";
-$item[8]="";
-$item[7]="";
+$item[8]="";
+$item[7]="";
+$item[6]="";
 
-$item[6]="";
-$item[5]="";
-$item[4]="";
+$item[5]="";
+$item[4]="";
+$item[3]="";
 
-$item[3]="";
-$item[2]="";
-$item[1]="";
+$item[2]="";
+$item[1]="";
+$item[0]="";
 
 $check[1]="";
 $check[2]="";
@@ -63,7 +63,7 @@ $card[1]="";
 	<table class="player">
 		<tr>
 			<td class="player_0 pl1">
-				<div class="player_a"></div>
+				<div class="player_a">　</div>
 				<span id="sub_a" class="get_sub"><?=$check[1]?></span>
 				<span id="ring_a" class="get_ring"><?=$check[2]?></span>
 				<div class="player_b pl1">
@@ -71,7 +71,20 @@ $card[1]="";
 					<span id="count_a" class="get_count">0</span>
 				</div>
 				<div id="down_a" class="player_d">▼</div>
-				<div id="down_a1" class="player_e"></div>
+				<div id="down_a1" class="player_e">
+				<div class="player_f fd f11"></div>
+				<div class="player_f fd f10"></div>
+				<div class="player_f fd f9"></div>
+				<div class="player_f fd f8"></div>
+				<div class="player_f fd f7"></div>
+				<div class="player_f fd f6"></div>
+				<div class="player_f fd f5"></div>
+				<div class="player_f fd f4"></div>
+				<div class="player_f fd f3"></div>
+				<div class="player_f fd f2"></div>
+				<div class="player_f fd f1"></div>
+				<div class="player_f fd f0"></div>
+				</div>
 				<div id="set_a" class="player_c"></div>
 			</td>
 			<td class="player_0 pl2">
@@ -83,7 +96,20 @@ $card[1]="";
 					<span id="count_b" class="get_count">0</span>
 				</div>
 				<div id="down_b" class="player_d">▼</div>
-				<div id="down_b1" class="player_e"></div>
+				<div id="down_b1" class="player_e">
+				<div class="player_f fd f11"></div>
+				<div class="player_f fd f10"></div>
+				<div class="player_f fd f9"></div>
+				<div class="player_f fd f8"></div>
+				<div class="player_f fd f7"></div>
+				<div class="player_f fd f6"></div>
+				<div class="player_f fd f5"></div>
+				<div class="player_f fd f4"></div>
+				<div class="player_f fd f3"></div>
+				<div class="player_f fd f2"></div>
+				<div class="player_f fd f1"></div>
+				<div class="player_f fd f0"></div>
+				</div>
 				<div id="set_b" class="player_c"></div>
 			</td>
 			<td class="player_0 pl3">
@@ -95,7 +121,20 @@ $card[1]="";
 					<span id="count_c" class="get_count">0</span>
 				</div>
 				<div id="down_c" class="player_d">▼</div>
-				<div id="down_c1" class="player_e"></div>
+				<div id="down_c1" class="player_e">
+				<div class="player_f fc f11"></div>
+				<div class="player_f fc f10"></div>
+				<div class="player_f fc f9"></div>
+				<div class="player_f fc f8"></div>
+				<div class="player_f fc f7"></div>
+				<div class="player_f fc f6"></div>
+				<div class="player_f fc f5"></div>
+				<div class="player_f fc f4"></div>
+				<div class="player_f fc f3"></div>
+				<div class="player_f fc f2"></div>
+				<div class="player_f fc f1"></div>
+				<div class="player_f fc f0"></div>
+				</div>
 				<div id="set_c" class="player_c"></div>
 			</td>
 			<td class="player_0 pl4">
@@ -107,7 +146,20 @@ $card[1]="";
 					<span id="count_d" class="get_count">0</span>
 				</div>
 				<div id="down_d" class="player_d">▼</div>
-				<div id="down_d1" class="player_e"></div>
+				<div id="down_d1" class="player_e">
+				<div class="player_f fd f11"></div>
+				<div class="player_f fd f10"></div>
+				<div class="player_f fd f9"></div>
+				<div class="player_f fd f8"></div>
+				<div class="player_f fd f7"></div>
+				<div class="player_f fd f6"></div>
+				<div class="player_f fd f5"></div>
+				<div class="player_f fd f4"></div>
+				<div class="player_f fd f3"></div>
+				<div class="player_f fd f2"></div>
+				<div class="player_f fd f1"></div>
+				<div class="player_f fd f0"></div>
+				</div>
 				<div id="set_d" class="player_c"></div>
 			</td>
 
@@ -151,7 +203,7 @@ START
 				</tr>
 				<tr>
 					<td class="td_b2">
-						<?for($s=12;$s>0;$s--){?>
+						<?for($s=11;$s>-1;$s--){?>
 						<span id="i<?=$s?>" class="p_pts">
 						<span class="p_pts_icon"><?=$item[$s]?></span>
 						</span>

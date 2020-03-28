@@ -94,28 +94,29 @@ if($check[0] >$check[1]){
     $win="l";
 }
 
-if($win!=1){
+if($win!=1){	
 	$sort["z"]=$win;
 }
 
 if($unit_data[$unit[$win]][0] == $card || $unit_data[$unit[$win]][1] == $card){
-	$sort["pts"]+=3;
+	$sort["pts"]=3;
 
 }elseif($unit_data[$unit[$win]][2] == $card || $unit_data[$unit[$win]][3] == $card){
-	$sort["pts"]-=2;
+	$sort["pts"]=(-2);
 
 }elseif($card==0){
-	$sort["pts"]+=4;
+	$sort["pts"]=4;
 
 }elseif($card==1){
-	$sort["pts"]+=3;
-
+	$sort["pts"]=3;
+	
 }elseif($card<7){
-	$sort["pts"]+=1;
+	$sort["pts"]=1;
 
 }else{
-	$sort["pts"]+=2;
+	$sort["pts"]=2;
 }
+
 
 echo json_encode($sort);
 ?>
