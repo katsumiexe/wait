@@ -81,13 +81,13 @@ if($check[0] >$check[1]){
 }elseif($check[1] >$check[2] && $check[2] >$check[3]){
     $win=$name[2];
 
-}elseif($check[1] == $check[2] && $check[3] >$check[4]){
+}elseif($check[1] == $check[2] && $check[2] >$check[3] && $check[3] >$check[4]){
     $win=$name[3];
 
-}elseif($check[1] == $check[2] && $check[2] == $check[3] && $check[3] != $check[4]){
+}elseif($check[1] == $check[2] && $check[2] == $check[3] && $check[3] > $check[4]){
     $win=$name[4];
 
-}elseif($check[2] == $check[3] && $check[3] != $check[4]){
+}elseif($check[2] == $check[3] && $check[3] > $check[4]){
     $win=$name[4];
 
 }else{

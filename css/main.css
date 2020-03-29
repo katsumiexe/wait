@@ -554,13 +554,15 @@
 }
 
 .turn_comm{
-	position:absolute;
-	top:260px;
-	left:20px;
-	width:200px;
-	height:40px;
-	border:1px solid #fff0e0;
-	font-size:14px;
+	position	:absolute;
+	top			:260px;
+	left		:20px;
+	width		:200px;
+	height		:40px;
+	border		:1px solid #fff0e0;
+	text-align	:left;
+	font-size	:13px;
+	background	:rgba(245,245,245,0.5);
 }
 
 .turn_pta{

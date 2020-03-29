@@ -1,6 +1,6 @@
 <?
 include_once("./library/session.php");
-
+$t=time();
 $card=$_POST["card"];
 $sql="SELECT * FROM card_data";
 $sql.=" WHERE sort='{$card}'";
@@ -12,10 +12,10 @@ $row = mysqli_fetch_assoc($res);
 $bonus=$row["bonus_1"]+$row["bonus_2"]+$row["bonus_3"]+$row["bonus_4"]+$row["bonus_5"];
 
 $app="<div class=\"turn_name\">{$row["name"]}</div>";
-$app.="<img src=\"turn_{$row["name"]}.png?d={$time()}\" class=\"turn_img\">";
-$app.="<div class=\"turn_comm\">{$row["comm"]?></div>";
-
+$app.="<img src=\"turn_{$row["id"]}.png?d={$t}\" class=\"turn_img\">";
+$app.="<div class=\"turn_comm\">{$row["comm"]}</div>";
 $app.="<div class=\"turn_title\">{$row["title"]}</div>";
+
 if($card<2){
 $app.="<div class=\"turn_ptc\">{$row["pts"]}</div>";
 }else{
@@ -25,3 +25,4 @@ $app.="<div class=\"turn_ptb\">{$row["bonus"]}</div>";
 echo $app;
 exit();
 ?>
+

@@ -204,7 +204,7 @@ START
 					<td class="td_b2">
 						<div class="guard"></div>
 						<?for($s=11;$s>-1;$s--){?>
-						<span id="i<?=$s?>" class="p_pts">
+						<span id="i<?=$s?>" class="p_pts p_pts_on">
 						<span class="p_pts_icon"><?=$item[$s]?></span>
 						</span>
 						<?}?>
