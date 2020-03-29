@@ -94,7 +94,7 @@ if($check[0] >$check[1]){
     $win="l";
 }
 
-if($win!=1){	
+if($win!="l"){	
 	$sort["z"]=$win;
 }
 

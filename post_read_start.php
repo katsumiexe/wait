@@ -7,8 +7,6 @@ while($row2 = mysqli_fetch_assoc($res2)){
 		$unit_data[$row2["id"]]=$row2;
 	}
 }
-
-
 $unit_select	=$_POST["unit_select"];
 $level_select	=$_POST["level_select"];
 
@@ -20,7 +18,10 @@ for($n=0;$n<4;$n++){
 		$ch++;
 	}
 	$unit[$n]=$base[$ch];
+	$ch++;
 }
+
+$unit[4]=$unit_select;
 
 $card=array(0,1,2,3,4,5,6,7,8,9,10,11);
 shuffle($card);
@@ -111,6 +112,8 @@ if($level_select==2){
 		}
 	}
 }
+
+$dat['u']=$unit;
 $dat['a']=$hand[0];
 $dat['b']=$hand[1];
 $dat['c']=$hand[2];

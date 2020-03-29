@@ -57,6 +57,15 @@ $(function(){
 			Up['c']=data.c;
 			Up['d']=data.d;
 			Up['e']=data.e;
+
+			Doll['a']=data['u'][0];
+			Doll['b']=data['u'][1];
+			Doll['c']=data['u'][2];
+			Doll['d']=data['u'][3];
+			Doll['p']=data['u'][4];
+
+			console.log(Doll);
+
 			console.log(Up['a']);
 			console.log(Up['b']);
 			console.log(Up['c']);
