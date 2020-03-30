@@ -35,6 +35,11 @@ $unit[4]=$unit_select;
 $card=array(0,1,2,3,4,5,6,7,8,9,10,11);
 shuffle($card);
 
+$dat["p1"]=$card[0];
+$dat["p2"]=$card[1];
+$dat["p3"]=$card[2];
+$dat["p4"]=$card[3];
+
 for($s=0;$s<4;$s++){
 	$god=8;
 	$bad=0;

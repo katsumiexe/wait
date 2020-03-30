@@ -213,10 +213,9 @@
 
 .guard{
 	position	:absolute;
-	width		:466px;		
-	height		:74px;		
-	z-index		:100;
-
+	width		:475px;		
+	height		:82px;		
+	z-index		:200;
 }
 	
 
@@ -292,7 +291,7 @@
 	height			:80px;
 	margin			:2px;
 	border			:1px solid #303030;
-	background		:linear-gradient(45deg,#fafafa,#ffc0e0);
+	background		:linear-gradient(135deg,#fafafa,#ffc0e0);
 }
 
 .sel_a{
@@ -373,9 +372,7 @@
 	margin		:auto;
 	height		:100px;
 	width		:100px;
-	background	:#303030;
 	z-index		:21;
-	color		:#fafafa;
 }
 
 .player_b{
@@ -531,59 +528,104 @@
 	padding-right	:2px;
 }
 
-.turn_start{
+.guard2{
+	display:none;
 	position		:absolute;
-	bottom			:130px;
-	right			:10px;
-	width			:80px;
+	bottom			:15px;
+	left			:0px;
+	right			:0px;
+	margin			:auto;
+	width			:90px;
+	height			:40px;
+	z-index		:200;
+}
+
+.turn_count{
+	position		:absolute;
+	top				:15px;
+	left			:0px;
+	right			:0px;
+	margin			:auto;
+	width			:100px;
 	height			:40px;
 	line-height		:40px;
-	border-radius	:4px;
-	background		:#fa9030;
-	text-align		:center;	
+
 }
+.turn_start{
+	position		:absolute;
+	bottom			:15px;
+	left			:0px;
+	right			:0px;
+	margin			:auto;
+	width			:90px;
+	height			:40px;
+	line-height		:40px;
+
+	border-radius	:10px;
+	background		:linear-gradient(#fa9030,#c06000);
+	text-align		:center;	
+	z-index			:160;
+	border			:1px solid #fa9030;
+	color			:#fafafa;
+	font-weight		:900;
+	font-size		:14px;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.turn_start:active {
+	transform: translateY(2px);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	background		:linear-gradient(#fab030,#fa9030);
+}
+
 
 .main_card{
 	display			:none;
 	position		:absolute;
 	top				:190px;
 	right			:200px;
-	width			:240px;
-	height			:360px;
-	border			:10px solid #ee0000;
+	width			:200px;
+	height			:240px;
+	border			:10px solid #e0f0ff;
 	overflow		:hidden;
 	border-radius	:20px;
-	background		:#cccccc;
+	background		:#fafafa;
 	z-index			:100;
 }
 
 .turn_name{
 	position:absolute;
-	top:20px;
-	left:20px;
-	font-size:20ps;
+	top:5px;
+	left		:0;
+	right		:0;
+	margin:auto;
+	font-size:13px;
 	font-weight:700;
 	color:#906000;
 }
 
 .turn_img{
 	position:absolute;
-	top:50px;
-	left:20px;
-	width:200px;
-	height:200px;	
+	top		:25px;
+	left		:0;
+	right		:0;
+	margin:auto;
+	width	:190px;
 }
 
 .turn_comm{
 	position	:absolute;
-	top			:260px;
-	left		:20px;
-	width		:200px;
-	height		:40px;
+	bottom		:5px;
+	left		:0;
+	right		:0;
+	margin		:auto;
+	width		:190px;
+	padding		:3px;
 	border		:1px solid #fff0e0;
 	text-align	:left;
 	font-size	:13px;
 	background	:rgba(245,245,245,0.5);
+	z-index		:110;
 }
 
 .turn_pta{
@@ -613,70 +655,70 @@
 	position		:absolute;
 	right			:3px;
 	width			:80px;
-	height			:120px;
+	height			:110px;
 	border			:5px solid #fafafa;
 	border-radius	:8px;
-	background		:linear-gradient(#d0e0ff,#e0f0ff);
+	background		:linear-gradient(#e0f0ff,#d0e0ff);
 	box-shadow		:0px -2px 1px rgba(30,30,30,0.6);
 }
 
 #rest11{
-	top:160px;
+	top:155px;
 	z-index:101;
 }
 
 #rest10{
-	top:180px;
+	top:170px;
 	z-index:102;
 }
 
 #rest9{
-	top:200px;
+	top:185px;
 	z-index:103;
 }
 
 #rest8{
-	top:220px;
+	top:200px;
 	z-index:104;
 }
 
 #rest7{
-	top:240px;
+	top:215px;
 	z-index:105;
 }
 
 #rest6{
-	top:260px;
+	top:230px;
 	z-index:106;
 }
 
 #rest5{
-	top:280px;
+	top:245px;
 	z-index:107;
 }
 
 #rest4{
-	top:300px;
+	top:260px;
 	z-index:108;
 }
 
 #rest3{
-	top:320px;
+	top:275px;
 	z-index:109;
 }
 
 #rest2{
-	top:340px;
+	top:290px;
 	z-index:110;
 }
 
 #rest1{
-	top:360px;
+	top:305px;
 	z-index:111;
 }
 
 #rest0{
-	top:380px;
+	top:320px;
 	z-index:112;
 }
 
