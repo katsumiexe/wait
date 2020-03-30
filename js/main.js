@@ -154,6 +154,7 @@ $(function(){
 		}).done(function(data2, textStatus, jqXHR){
 			Pts[data2.z]=parseFloat(Pts[data2.z])+parseFloat(data2.pts);
 			Cnt[data2.z]++;
+			console.log("Pts" + Pts[data2.z]);
 
 			if(data2.ring==2){
 				 $('#sub_' + data2.z).delay(3000).css('color','#ff90a0');
@@ -164,16 +165,19 @@ $(function(){
 
             $('.main_card').html(data2.cord);
 
-
-            $('#count_a').text(Cnt['a']);
-            $('#count_b').text(Cnt['b']);
-            $('#count_c').text(Cnt['c']);
-            $('#count_d').text(Cnt['d']);
-
+            $('#count_a').delay(3000).text(Cnt['a']);
+            $('#count_b').delay(3000).text(Cnt['b']);
+            $('#count_c').delay(3000).text(Cnt['c']);
+            $('#count_d').delay(3000).text(Cnt['d']);
+            $('#count_p').delay(3000).text(Cnt['p']);
+/*
             $('.pl1').children('.player_a').delay(3000).text(Pts['a']);
             $('.pl2').children('.player_a').delay(3000).text(Pts['b']);
             $('.pl3').children('.player_a').delay(3000).text(Pts['c']);
             $('.pl4').children('.player_a').delay(3000).text(Pts['d']);
+*/
+			Pts_n=parseInt(Pts['p'])
+            $('#pts_p').delay(3000).text(Pts_n);
 
             $('#set_z').text(data2.z);
 
@@ -181,11 +185,12 @@ $(function(){
 			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[Up['b'][Turn]]);
 			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[Up['c'][Turn]]);
 			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[Up['d'][Turn]]);
-
-			Tmp=$('count_'+data2.z).text();
+/*
+			Tmp=$('#count_'+data2.z).text();
 			Tmp=parseFloat(Tmp) + 1;
-			$('count_'+data2.z).text(Tmp);
-
+			$('#count_'+data2.z).text(Tmp);
+			console.log("Z" + data2.z);
+*/
 			if(data2.z=='p'){
 				$('.main_card').delay(2000).animate({'top':'90vh','right':'550px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 			}else if(data2.z=='a'){
@@ -201,7 +206,7 @@ $(function(){
 				$('.main_card').delay(2000).animate({'top':'50px','right':'180px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='l'){
-				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 			}
 
 			$('.guard2').delay(3000).fadeOut(0);

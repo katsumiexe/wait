@@ -187,6 +187,24 @@ $card[1]="";
 <div class="main_card"></div>
 
 
+<table class="table_a">
+<tr>
+<td class="td_a">
+	<span class="get_icon"><?=$card[1]?></span>
+	<span id="count_p" class="get_count">0</span>
+</td>
+<td class="td_a">
+	<span class="get_icon"><?=$card[1]?></span>
+	<span id="pts_p" class="get_count">0</span>
+</td>
+<td class="td_a">
+	<span id="sub_p" class="a_sub"><?=$check[1]?></span>
+	<span id="ring_p" class="a_ring"><?=$check[2]?></span>
+</td>
+
+</tr>
+</table>
+
 <img id="myicon" src="" class="myimg">
 <table class="table_b">
 	<tr>
@@ -210,9 +228,9 @@ $card[1]="";
 		</td>
 	</tr>
 </table>
+</div>
+</div>
 
-</div>
-</div>
 
 <div class="pop_back">
 	<div class="pop_a">

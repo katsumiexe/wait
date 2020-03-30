@@ -1,5 +1,4 @@
 <?
-
 $unit_data[0][0]=2;
 $unit_data[0][1]=3;
 $unit_data[0][2]=7;
@@ -92,6 +91,8 @@ if($check[0] >$check[1]){
 
 }else{
     $win="l";
+	$sort["z"]=$win;
+	$sort["pts"]=0;
 }
 
 if($win!="l"){	
