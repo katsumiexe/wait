@@ -1,53 +1,53 @@
 <?
-$unit_data[0][0]=2;
-$unit_data[0][1]=3;
-$unit_data[0][2]=7;
-$unit_data[0][3]=8;
-
 $unit_data[1][0]=2;
-$unit_data[1][1]=4;
+$unit_data[1][1]=3;
 $unit_data[1][2]=7;
-$unit_data[1][3]=9;
+$unit_data[1][3]=8;
 
 $unit_data[2][0]=2;
-$unit_data[2][1]=5;
+$unit_data[2][1]=4;
 $unit_data[2][2]=7;
-$unit_data[2][3]=10;
+$unit_data[2][3]=9;
 
 $unit_data[3][0]=2;
-$unit_data[3][1]=6;
+$unit_data[3][1]=5;
 $unit_data[3][2]=7;
-$unit_data[3][3]=11;
+$unit_data[3][3]=10;
 
-$unit_data[4][0]=3;
-$unit_data[4][1]=4;
-$unit_data[4][2]=8;
-$unit_data[4][3]=9;
+$unit_data[4][0]=2;
+$unit_data[4][1]=6;
+$unit_data[4][2]=7;
+$unit_data[4][3]=11;
 
 $unit_data[5][0]=3;
-$unit_data[5][1]=5;
+$unit_data[5][1]=4;
 $unit_data[5][2]=8;
-$unit_data[5][3]=10;
+$unit_data[5][3]=9;
 
 $unit_data[6][0]=3;
-$unit_data[6][1]=6;
+$unit_data[6][1]=5;
 $unit_data[6][2]=8;
-$unit_data[6][3]=11;
+$unit_data[6][3]=10;
 
-$unit_data[7][0]=4;
-$unit_data[7][1]=5;
-$unit_data[7][2]=9;
-$unit_data[7][3]=10;
+$unit_data[7][0]=3;
+$unit_data[7][1]=6;
+$unit_data[7][2]=8;
+$unit_data[7][3]=11;
 
 $unit_data[8][0]=4;
-$unit_data[8][1]=6;
+$unit_data[8][1]=5;
 $unit_data[8][2]=9;
-$unit_data[8][3]=11;
+$unit_data[8][3]=10;
 
-$unit_data[9][0]=5;
+$unit_data[9][0]=4;
 $unit_data[9][1]=6;
-$unit_data[9][2]=10;
+$unit_data[9][2]=9;
 $unit_data[9][3]=11;
+
+$unit_data[10][0]=5;
+$unit_data[10][1]=6;
+$unit_data[10][2]=10;
+$unit_data[10][3]=11;
 
 $turn		=$_POST["turn"];
 $sort["p"]	=$_POST["bet"];

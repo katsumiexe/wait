@@ -208,9 +208,9 @@ $(function(){
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 			}
-
+			if(Turn<12){
 			$('.guard2').delay(3000).fadeOut(0);
-
+			}
 
 
 			console.log(data2);
