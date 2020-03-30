@@ -101,7 +101,7 @@ $(function(){
 				"card":Up['e'][Turn]
 			},
 		}).done(function(data, textStatus, jqXHR){
-			$('#rest'+Turn).animate({'top':'160px','right':'200px','height':'300px','width':'240px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
+			$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
 			$('.main_card').delay(300).fadeIn(0).html(data);
 		
 		}).fail(function(xhr, textStatus, errorThrown) {
@@ -189,16 +189,16 @@ $(function(){
 			if(data2.z=='p'){
 				$('.main_card').delay(2000).animate({'top':'90vh','right':'550px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 			}else if(data2.z=='a'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'540px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'160px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000).animate({'top':'50px','right':'540px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='b'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'420px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'160px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000).animate({'top':'50px','right':'420px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='c'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'300px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'160px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000).animate({'top':'50px','right':'300px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='d'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'180px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'160px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000).animate({'top':'50px','right':'180px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'360px','width':'240px','border-width':'10px','border-radius':'20px'},0);

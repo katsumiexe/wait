@@ -14,8 +14,6 @@ $bonus=$row["bonus_1"]+$row["bonus_2"]+$row["bonus_3"]+$row["bonus_4"]+$row["bon
 $app="<div class=\"turn_name\">{$row["name"]}</div>";
 $app.="<img src=\"./img/card/card_{$row["sort"]}.png?d={$t}\" class=\"turn_img\">";
 $app.="<div class=\"turn_comm\">{$row["comm"]}</div>";
-$app.="<div class=\"turn_title\">{$row["title"]}</div>";
-
 if($card<2){
 $app.="<div class=\"turn_ptc\">{$row["pts"]}</div>";
 }else{

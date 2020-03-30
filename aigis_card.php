@@ -164,7 +164,8 @@ $card[1]="";
 			</td>
 
 			<td class="player_0 pl5">
-				<div class="turn_count"></div>
+				<div class="turn">TURN</div>
+				<div class="turn_count">0</div>
 				<div class="turn_start">START</div>
 				<div class="guard2"></div>
 			</td>
