@@ -64,6 +64,16 @@ $(function(){
 			Doll['d']=data['u'][3];
 			Doll['p']=data['u'][4];
 
+			$('#myicon').attr('src','./img/unit/unit_'+ Unit_Select +'.png');
+
+			$('#myname').text(data.name);
+			$('#status_1').addClass(data.s1);
+			$('#status_2').addClass(data.s2);
+			$('#status_3').addClass(data.s3);
+			$('#status_4').addClass(data.s4);
+			$('#status_5').addClass(data.s5);
+
+
 			console.log(Doll);
 
 			console.log(Up['a']);

@@ -181,30 +181,34 @@
     font-size:20px;
 }
 
-.table_a{
-	position:absolute;
-	bottom:0;
-    width:600px;    
-    background:#fafafa;
-}
 
-.td_a{
-    width:120px;    
-    background:#a0f0ff;
+.myimg{
+	position:absolute;
+	bottom	:0;
+	left	:0;
+	width	:120px;
+	height	:120px;
 }
 
 .table_b{
-    width:100%;    
+	position:absolute;
+	bottom:0;
+	right:0;
+	border-collapse: collapse;
+    width:480px;    
     background:#e0f0ff;
 }
 
+
 .td_b1{
-    height:30px;    
+    width:480px;    
+    height:35px;    
 }
 
 .td_b2{
 	position:rilative;
 	font-size:0;
+    height:85px;    
 }
 
 .guard{
@@ -219,26 +223,43 @@
 .p_name{
     display:inline-block;
     width:200px;
-    background:#ff5030;
+	text-align:left;
+	font-weight:600;
+	font-size:16px;
 }
 
 .p_status{
     display:inline-block;
     width:45px;
-    background:#ff50a0;
+	text-align:center;
+	font-weight:600;
+	border-radius:3px;
+	color:#fafafa;
+	text-shadow:1px 1px #303030;
 }
+
+.on1{
+    background:linear-gradient(#c00000,#900000);
+}
+
+.on0{
+    background:#dddddd;
+}
+
+
+
 
 .p_pts{
 	position		:relative;
     display			:inline-block;
-    width			:74px;
-    height			:34px;
+    width			:75px;
+    height			:38px;
     background		:#cccccc;
     box-sizing		:border-box;
     border			:1px solid #ffffff;
 	color			:#fafafa;
 	text-align		:center;
-	margin			:1px;
+	margin			:2px;
 }
 
 .p_pts_icon{

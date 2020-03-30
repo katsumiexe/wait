@@ -10,6 +10,15 @@ while($row2 = mysqli_fetch_assoc($res2)){
 $unit_select	=$_POST["unit_select"];
 $level_select	=$_POST["level_select"];
 
+
+$dat["name"]=$unit_data[$unit_select]["name"];
+$dat["s1"]="on".$unit_data[$unit_select]["status_1"];
+$dat["s2"]="on".$unit_data[$unit_select]["status_2"];
+$dat["s3"]="on".$unit_data[$unit_select]["status_3"];
+$dat["s4"]="on".$unit_data[$unit_select]["status_4"];
+$dat["s5"]="on".$unit_data[$unit_select]["status_5"];
+
+
 $base=array(1,2,3,4,5,6,7,8,9,10);
 shuffle($base);
 $ch=0;

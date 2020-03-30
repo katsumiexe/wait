@@ -1,5 +1,5 @@
 <?php
-/*include_once("./library/session.php");*/
+include_once("./library/session.php");
 
 $item[11]="";
 $item[10]="";
@@ -46,7 +46,7 @@ $card[1]="";
 <div class="page_01">
 <?for($e=1;$e<11;$e++){?>
 	<div id="s<?=$e?>" class="sel">
-	<img src="./img/unit/unit_0.png" class="sel_a">
+	<img src="./img/unit/unit_<?=$e?>.png" class="sel_a">
 	<span class="sel_b">
 	<span class="sel_b_1 <?if($unit[$e]["status_1"]==1){?>sel_on<?}?>"><?=$status[1]["name"]?></span>
 	<span class="sel_b_1 <?if($unit[$e]["status_2"]==1){?>sel_on<?}?>"><?=$status[2]["name"]?></span>
@@ -185,35 +185,32 @@ $card[1]="";
 <div class="turn_start">
 START
 </div>
-<table class="table_a">
+
+
+<img id="myicon" src="" class="myimg">
+<table class="table_b">
 	<tr>
-		<td class="td_a">あ</td>
-		<td>
-			<table class="table_b">
-				<tr>
-					<td class="td_b1">
-						<span class="p_name">みりあ</span>
-						<span class="p_status">みり</span>
-						<span class="p_status">みり</span>
-						<span class="p_status">みり</span>
-						<span class="p_status">みり</span>
-						<span class="p_status">みり</span>
-					</td>
-				</tr>
-				<tr>
-					<td class="td_b2">
-						<div class="guard"></div>
-						<?for($s=11;$s>-1;$s--){?>
-						<span id="i<?=$s?>" class="p_pts p_pts_on">
-						<span class="p_pts_icon"><?=$item[$s]?></span>
-						</span>
-						<?}?>
-					</td>
-				</tr>
-			</table>
+		<td class="td_b1">
+			<span id="myname" class="p_name">みりあ</span>
+			<span id="status_1" class="p_status"><?=$status[1]["name"]?></span>
+			<span id="status_2" class="p_status"><?=$status[2]["name"]?></span>
+			<span id="status_3" class="p_status"><?=$status[3]["name"]?></span>
+			<span id="status_4" class="p_status"><?=$status[4]["name"]?></span>
+			<span id="status_5" class="p_status"><?=$status[5]["name"]?></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="td_b2">
+			<div class="guard"></div>
+			<?for($s=11;$s>-1;$s--){?>
+			<span id="i<?=$s?>" class="p_pts p_pts_on">
+			<span class="p_pts_icon"><?=$item[$s]?></span>
+			</span>
+			<?}?>
 		</td>
 	</tr>
 </table>
+
 </div>
 </div>
 
