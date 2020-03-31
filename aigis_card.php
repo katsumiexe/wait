@@ -186,7 +186,6 @@ $card[1]="";
 <span id="rest11" class="rest_card"></span>
 <div class="main_card"></div>
 
-
 <table class="table_a">
 <tr>
 <td class="td_a">
@@ -194,7 +193,7 @@ $card[1]="";
 	<span id="count_p" class="get_count">0</span>
 </td>
 <td class="td_a">
-	<span class="get_icon"><?=$card[1]?></span>
+	<span class="get_icon2"></span>
 	<span id="pts_p" class="get_count">0</span>
 </td>
 <td class="td_a">
@@ -230,8 +229,6 @@ $card[1]="";
 </table>
 </div>
 </div>
-
-
 <div class="pop_back">
 	<div class="pop_a">
 		<img src="" class="pop_a_1">
@@ -244,8 +241,6 @@ $card[1]="";
 		<div id="start" class="btn c2">選択</div>
 	</div>
 </div>
-
-
 
 </body>
 </html>

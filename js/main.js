@@ -77,9 +77,7 @@ $(function(){
 			$('#status_4').addClass(data.s4);
 			$('#status_5').addClass(data.s5);
 
-
 			console.log(Doll);
-
 			console.log(Up['a']);
 			console.log(Up['b']);
 			console.log(Up['c']);
@@ -101,7 +99,13 @@ $(function(){
 				"card":Up['e'][Turn]
 			},
 		}).done(function(data, textStatus, jqXHR){
-			$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
+
+			if (window.matchMedia( "(max-width: 619x)" ).matches) {
+				$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
+			} else {
+				$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
+			}
+
 			$('.main_card').delay(300).fadeIn(0).html(data);
 		
 		}).fail(function(xhr, textStatus, errorThrown) {
@@ -114,9 +118,7 @@ $(function(){
 		Tmp_Id=$(this).attr('id')+'1';
 		Tmp_No=$(this).attr('id').replace('down_','');
 		$('.f'+Tmp_No).css('color','#e0e0e0');		
-
 		$('.player_c').animate({'top':'110px'},100);
-
 
 		if($('#'+Tmp_Id).css("display") == 'none'){
 			for(i=Turn ;i<12;i++){
@@ -180,7 +182,6 @@ $(function(){
             $('#pts_p').delay(3000).text(Pts_n);
 
             $('#set_z').text(data2.z);
-
 			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[Up['a'][Turn]]);
 			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[Up['b'][Turn]]);
 			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[Up['c'][Turn]]);
@@ -208,7 +209,7 @@ $(function(){
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
 			}
-			if(Turn<12){
+			if(Turn<11){
 			$('.guard2').delay(3000).fadeOut(0);
 			}
 
