@@ -21,6 +21,31 @@ var Pts={
 		"p": 0
 };
 
+if (window.matchMedia( "(max-width: 619x)" ).matches) {
+	var W10="10px";
+	var W20="20px";
+	var W110="110px";
+	var W150="150px";
+	var W190="190px";
+	var W200="200px";
+	var W240="240px";
+
+}else{
+	var W10="2vw";
+	var W20="4vw";
+	var W110="22vw";
+	var W150="30vw";
+	var W190="38vw";
+	var W200="40vw";
+	var W240="48vw";
+}
+
+
+
+
+
+
+
 var R=0;
 $(function(){ 
     $('.sel').on('click',function(){
@@ -89,8 +114,8 @@ $(function(){
 	$('.turn_start').on('click',function(){
 		$('.guard').hide();
 		$('.guard2').show();
-		$('.player_c').animate({'top':'110px'},100);
-		$('.player_e').slideUp(100).animate({'top':'110px'},0);		
+		$('.player_c').animate({'top':W10},100);
+		$('.player_e').slideUp(100).animate({'top':W10},0);		
 		$('.turn_count').text(Turn+1);
 
 		$.post({
@@ -99,12 +124,7 @@ $(function(){
 				"card":Up['e'][Turn]
 			},
 		}).done(function(data, textStatus, jqXHR){
-
-			if (window.matchMedia( "(max-width: 619x)" ).matches) {
-				$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
-			} else {
-				$('#rest'+Turn).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},300).delay(100).fadeOut(200);
-			}
+			$('#rest'+Turn).animate({'top':W190,'right':W200,'height':W240,'width':W200,'border-width':W10,'border-radius':W20},300).delay(100).fadeOut(200);
 
 			$('.main_card').delay(300).fadeIn(0).html(data);
 		
@@ -118,16 +138,16 @@ $(function(){
 		Tmp_Id=$(this).attr('id')+'1';
 		Tmp_No=$(this).attr('id').replace('down_','');
 		$('.f'+Tmp_No).css('color','#e0e0e0');		
-		$('.player_c').animate({'top':'110px'},100);
+		$('.player_c').animate({'top':W110},100);
 
 		if($('#'+Tmp_Id).css("display") == 'none'){
 			for(i=Turn ;i<12;i++){
 				$(this).next().children('.f'+Up[Tmp_No][i]).css('color','#906000');		
 			}
-			$('#'+Tmp_Id).animate({'top':'145px'},0).slideDown(200);		
+			$('#'+Tmp_Id).animate({'top':W150},0).slideDown(200);		
 
 		}else{
-			$('#'+Tmp_Id).animate({'top':'110px'},0).slideUp(150);		
+			$('#'+Tmp_Id).animate({'top':W110},0).slideUp(150);		
 		}
     });
 
@@ -182,10 +202,10 @@ $(function(){
             $('#pts_p').delay(3000).text(Pts_n);
 
             $('#set_z').text(data2.z);
-			$('#set_a').delay(200).animate({'top':'150px'},500).text(Items[Up['a'][Turn]]);
-			$('#set_b').delay(250).animate({'top':'150px'},500).text(Items[Up['b'][Turn]]);
-			$('#set_c').delay(300).animate({'top':'150px'},500).text(Items[Up['c'][Turn]]);
-			$('#set_d').delay(350).animate({'top':'150px'},500).text(Items[Up['d'][Turn]]);
+			$('#set_a').delay(200).animate({'top':W150},500).text(Items[Up['a'][Turn]]);
+			$('#set_b').delay(250).animate({'top':W150},500).text(Items[Up['b'][Turn]]);
+			$('#set_c').delay(300).animate({'top':W150},500).text(Items[Up['c'][Turn]]);
+			$('#set_d').delay(350).animate({'top':W150},500).text(Items[Up['d'][Turn]]);
 /*
 			Tmp=$('#count_'+data2.z).text();
 			Tmp=parseFloat(Tmp) + 1;
