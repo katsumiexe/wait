@@ -153,7 +153,7 @@ body {
 
 .page_02{
 	position	:absolute;
-	height		:95vh;
+	height		:100vh;
 	display		:none;
 	oveflow		:hidden;
 }
@@ -790,7 +790,7 @@ body {
 	top		:0;
 	right	:0;
     width	:100vw;
-	height	:90vh;
+	height	:100vh;
 }
 
 .pop_a{
@@ -847,8 +847,9 @@ body {
 }
 
 .myimg{
-	width	:20vw;
-	height	:20vw;
+	width			:20vw;
+	height			:20vw;
+	bottom			:20vw;
 }
 
 .a_sub{
@@ -866,7 +867,7 @@ body {
 }
 
 .table_a{
-	bottom			:21vw;
+	bottom			:42vw;
 	left			:1vw;
 }
 
@@ -878,6 +879,7 @@ body {
 
 .table_b{
     width			:80vw;
+	bottom			:20vw;
 }
 
 .td_b1{
@@ -1026,32 +1028,23 @@ body {
 }
 
 .get_sub{
-	font-family		:at_item;
-	display			:inline-block;
-	position		:absolute;
-	top				:80px;
-	right			:35px;
+	top				:16.5vw;
+	right			:7.5vw;
 
-	height			:25px;
-	line-height		:25px;
-	width			:25px;
-	font-size		:25px;
-	color			:#f0f0f0;	
-	z-index			:22;
+	height			:5vw;
+	line-height		:5vw;
+	width			:5vw;
+	font-size		:5vw;
 }
 
 .get_ring{
-	font-family		:at_item;
-	display			:inline-block;
-	position		:absolute;
-	top				:80px;
-	right			:10px;
-	height			:25px;
-	line-height		:25px;
-	width			:25px;
-	font-size		:20px;
-	color			:#f0f0f0;	
-	z-index			:22;
+	top				:17vw;
+	right			:3vw;
+
+	height			:4vw;
+	line-height		:4vw;
+	width			:4vw;
+	font-size		:4vw;
 }
 
 .get_icon{
@@ -1200,18 +1193,18 @@ body {
 
 
 .turn_ptc{
-	position:absolute;
-	top:25px;
-	right:5px;
-	width:30px;
-	height:30px;
-	line-height:30px;
-	font-size:18px;
-	font-weight:800;
-	color:#0000d0;
-	background:#fff0fa;
-	border:3px solid #ff3030;
-	text-shadow:2px 2px 0 #fafafa;
+	position	:absolute;
+	top			:25px;
+	right		:5px;
+	width		:30px;
+	height		:30px;
+	line-height	:30px;
+	font-size	:18px;
+	font-weight	:800;
+	color		:#0000d0;
+	background	:#fff0fa;
+	border		:3px solid #ff3030;
+	text-shadow	:2px 2px 0 #fafafa;
 	border-radius:50%;
 }
 
@@ -1249,51 +1242,51 @@ body {
 }
 
 #rest11{
-	bottom:22vw;
-}
-
-#rest10{
-	bottom:24vw;
-}
-
-#rest9{
-	bottom:26vw;
-}
-
-#rest8{
-	bottom:28vw;
-}
-
-#rest7{
-	bottom:30vw;
-}
-
-#rest6{
-	bottom:32vw;
-}
-
-#rest5{
-	bottom:34vw;
-}
-
-#rest4{
-	bottom:36vw;
-}
-
-#rest3{
-	bottom:38vw;
-}
-
-#rest2{
-	bottom:40vw;
-}
-
-#rest1{
 	bottom:42vw;
 }
 
-#rest0{
+#rest10{
 	bottom:44vw;
+}
+
+#rest9{
+	bottom:46vw;
+}
+
+#rest8{
+	bottom:48vw;
+}
+
+#rest7{
+	bottom:50vw;
+}
+
+#rest6{
+	bottom:52vw;
+}
+
+#rest5{
+	bottom:54vw;
+}
+
+#rest4{
+	bottom:56vw;
+}
+
+#rest3{
+	bottom:58vw;
+}
+
+#rest2{
+	bottom:60vw;
+}
+
+#rest1{
+	bottom:62vw;
+}
+
+#rest0{
+	bottom:64vw;
 }
 
 
