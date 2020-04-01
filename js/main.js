@@ -24,27 +24,44 @@ var Pts={
 if (window.matchMedia( "(max-width: 619x)" ).matches) {
 	var W10="10px";
 	var W20="20px";
+
+
+	var W50="50px";
 	var W110="110px";
 	var W150="150px";
-	var W190="190px";
-	var W200="200px";
-	var W240="240px";
+
+	var Size_t="190px";
+	var Size_r="200px";
+	var Size_h="240px";
+	var Size_w="200px";
+
+
+	var W540="540px";
+	var W420="420px";
+	var W300="360px";
+	var W180="180px";
+
+	var W700="700px";
 
 }else{
 	var W10="2vw";
 	var W20="4vw";
+	var W50="10vw";
 	var W110="22vw";
 	var W150="30vw";
-	var W190="38vw";
-	var W200="40vw";
-	var W240="48vw";
+
+
+	var Size_t="46vw";
+	var Size_r="30vw";
+	var Size_h="54vw";
+	var Size_w="45vw";
+
+	var W540="87.5vw";
+	var W420="62.5vw";
+	var W300="37.5vw";
+	var W180="12.5vw";
+	var W700="150vw";
 }
-
-
-
-
-
-
 
 var R=0;
 $(function(){ 
@@ -58,7 +75,6 @@ $(function(){
 		$('.pop_a_3').html(Sel);
 		$('.pop_a_2').html(Name);
 		$('.pop_a_1').attr('src',Img);
-
     });
 
 	$('#reset').on('click',function(){
@@ -124,8 +140,7 @@ $(function(){
 				"card":Up['e'][Turn]
 			},
 		}).done(function(data, textStatus, jqXHR){
-			$('#rest'+Turn).animate({'top':W190,'right':W200,'height':W240,'width':W200,'border-width':W10,'border-radius':W20},300).delay(100).fadeOut(200);
-
+			$('#rest'+Turn).animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':W10,'border-radius':W20},300).delay(100).fadeOut(200);
 			$('.main_card').delay(300).fadeIn(0).html(data);
 		
 		}).fail(function(xhr, textStatus, errorThrown) {
@@ -213,21 +228,35 @@ $(function(){
 			console.log("Z" + data2.z);
 */
 			if(data2.z=='p'){
-				$('.main_card').delay(2000).animate({'top':'90vh','right':'550px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'top':'90vh','right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
+
+
 			}else if(data2.z=='a'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'540px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'top':W50,'right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='b'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'420px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'top':W50,'right':W420,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='c'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'300px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'top':W50,'right':W300,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='d'){
-				$('.main_card').delay(2000).animate({'top':'50px','right':'180px','height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'top':W50,'right':W180,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 
 			}else if(data2.z=='l'){
-				$('.main_card').delay(2000).animate({'right':'700px'},800).fadeOut(0).animate({'top':'190px','right':'200px','height':'240px','width':'200px','border-width':'10px','border-radius':'20px'},0);
+				$('.main_card').delay(2000)
+				.animate({'right':W700},800).fadeOut(0)
+				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 			}
 			if(Turn<11){
 			$('.guard2').delay(3000).fadeOut(0);

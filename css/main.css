@@ -1122,69 +1122,37 @@ body {
 	transform: translateY(0.5vw);
 }
 
-
 .main_card{
-	display			:none;
-	position		:absolute;
-	top				:190px;
-	right			:200px;
-	width			:200px;
-	height			:240px;
-	border			:10px solid #e0f0ff;
-	overflow		:hidden;
-	border-radius	:20px;
-	background		:#fafafa;
+	top				:46vw;
+	right			:30vw;
+	width			:45vw;
+	height			:54vw;
 	z-index			:100;
 }
 
 .turn_name{
-	position		:absolute;
-	top				:5px;
-	left			:0;
-	right			:0;
-	margin			:auto;
-	font-size		:13px;
-	font-weight		:700;
-	color			:#906000;
+	font-size		:3.5vw;
 }
 
 .turn_img{
-	position		:absolute;
-	top				:25px;
-	left			:0;
-	right			:0;
-	margin			:auto;
-	width			:190px;
+	top				:5vw;
+	width			:44vw;
 }
 
 .turn_comm{
-	position	:absolute;
-	bottom		:5px;
-	left		:0;
-	right		:0;
-	margin		:auto;
-	width		:180px;
-	padding		:3px;
-	border		:1px solid #fff0e0;
-	text-align	:left;
-	font-size	:13px;
-	background	:rgba(245,245,245,0.8);
-	z-index		:110;
+	bottom		:1vw;
+	width		:44vw;
+	padding		:1vw;
+	font-size	:3vw;
 }
 
 .turn_pta{
-	position	:absolute;
-	top			:25px;
-	right		:5px;
-	width		:60px;
-	height		:25px;
-	line-height	:25px;
-	font-size	:16px;
-	font-weight	:800;
-	color		:#0000d0;
-	background:#fafafa;
-	border-bottom:2px solid #309090;
-	text-shadow:1px 1px 0 #fafafa;
+	top			:6vw;
+	right		:2vw;
+	width		:14vw;
+	height		:6vw;
+	line-height	:6vw;
+	font-size	:4vw;
 }
 
 .turn_ptb{
@@ -1193,19 +1161,13 @@ body {
 
 
 .turn_ptc{
-	position	:absolute;
-	top			:25px;
-	right		:5px;
-	width		:30px;
-	height		:30px;
-	line-height	:30px;
-	font-size	:18px;
-	font-weight	:800;
-	color		:#0000d0;
-	background	:#fff0fa;
-	border		:3px solid #ff3030;
-	text-shadow	:2px 2px 0 #fafafa;
-	border-radius:50%;
+	top			:5vw;
+	right		:2vw;
+	width		:7vw;
+	height		:7vw;
+	line-height	:7vw;
+	font-size	:5vw;
+	border		:1vw solid #ff3030;
 }
 
 .pl1{

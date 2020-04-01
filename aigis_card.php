@@ -30,9 +30,7 @@ $card[1]="";
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="./css/main.css?_<?=date("YmdHi")?>">
-
 <style>
-
 </style>
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/jquery.easing.1.3.js"></script>
@@ -41,7 +39,6 @@ $card[1]="";
 </script>
 </head>
 <body style="text-align:center">
-
 <div class="main">
 <div class="page_01">
 <?for($e=1;$e<11;$e++){?>
@@ -183,7 +180,6 @@ $card[1]="";
 <span id="rest10" class="rest_card"></span>
 <span id="rest11" class="rest_card"></span>
 <div class="main_card"></div>
-
 <table class="table_a">
 <tr>
 <td class="td_a">
@@ -198,9 +194,9 @@ $card[1]="";
 	<span id="sub_p" class="a_sub"><?=$check[1]?></span>
 	<span id="ring_p" class="a_ring"><?=$check[2]?></span>
 </td>
-
 </tr>
 </table>
+
 
 <img id="myicon" src="" class="myimg">
 <table class="table_b">
@@ -226,7 +222,6 @@ $card[1]="";
 </table>
 </div>
 </div>
-
 <div class="pop_back">
 	<div class="pop_a">
 		<img src="" class="pop_a_1">
