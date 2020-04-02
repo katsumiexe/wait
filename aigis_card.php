@@ -162,8 +162,6 @@ $card[1]="";
 		<div class="player_0 pl5">
 			<div class="turn">TURN</div>
 			<div class="turn_count">0</div>
-			<div class="turn_start">START</div>
-			<div class="guard2"></div>
 		</div>
 	</div>
 
@@ -179,6 +177,8 @@ $card[1]="";
 <span id="rest9" class="rest_card"></span>
 <span id="rest10" class="rest_card"></span>
 <span id="rest11" class="rest_card"></span>
+<div class="guard3"></div>
+<div class="turn_start_main">START</div>
 <div class="main_card"></div>
 <table class="table_a">
 <tr>
@@ -197,7 +197,6 @@ $card[1]="";
 </tr>
 </table>
 
-
 <img id="myicon" src="" class="myimg">
 <table class="table_b">
 	<tr>
@@ -210,7 +209,6 @@ $card[1]="";
 			<span id="status_5" class="p_status"><?=$status[5]["name"]?></span>
 		</td>
 	</tr>
-
 	<tr>
 		<td class="td_b2">
 			<div class="guard"></div>
@@ -221,6 +219,7 @@ $card[1]="";
 	</tr>
 </table>
 </div>
+
 </div>
 <div class="pop_back">
 	<div class="pop_a">

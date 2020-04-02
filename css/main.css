@@ -478,33 +478,42 @@ body {
 	background:#cccccc;
 }
 
-.turn_start{
-	position		:absolute;
-	bottom			:15px;
-	left			:0px;
-	right			:0px;
-	margin			:auto;
-	width			:90px;
-	height			:40px;
-	line-height		:40px;
 
-	border-radius	:10px;
+.guard3{
+	display			:none;
+	position		:absolute;
+	top				:210px;
+	right			:210px;
+	width			:200px;
+	height			:200px;
+	background		:#f0f0f0;
+	z-index			:70;
+
+}
+.turn_start_main{
+	position		:absolute;
+	top				:220px;
+	right			:220px;
+	width			:180px;
+	height			:180px;
+	border			:10px solid #fa9030;
+	overflow		:hidden;
+
+	border-radius	:50%;
 	background		:linear-gradient(#fa9030,#c06000);
 	text-align		:center;	
-	z-index			:160;
-	border			:1px solid #fa9030;
+
 	color			:#fafafa;
 	font-weight		:900;
 	font-size		:14px;
-	box-shadow		:2px 2px 1px rgba(0, 0, 0, 0.15);
+	z-index			:60;
 }
 
-.turn_start:active {
+.turn_start_main:active {
 	transform		:translateY(2px);
 	box-shadow		: 0 0 1px rgba(0, 0, 0, 0.15);
 	background		:linear-gradient(#fab030,#fa9030);
 }
-
 
 .get_sub{
 	font-family		:at_item;
@@ -1106,20 +1115,27 @@ body {
 	text-shadow		:2px 2px 1px #903000;
 	box-shadow		:0 0 0;
 }
-.turn_start{
-	bottom			:1vw;
-	left			:auto;
-	right			:2vw;
-	width			:20vw;
-	height			:6vw;
-	line-height		:6vw;
 
-	border-radius	:2vw;
-	font-size		:4vw;
+.turn_start_main{
+	top				:52vw;
+	right			:31vw;
+	width			:43vw;
+	height			:43vw;
+	line-height		:43vw;
+	font-size		:10vw;
 }
 
-.turn_start:active {
+.turn_start_main:active {
 	transform: translateY(0.5vw);
+}
+
+
+.guard3{
+	top				:50vw;
+	right			:29vw;
+	width			:53vw;
+	height			:53vw;
+	border-width	:2vw;
 }
 
 .main_card{
