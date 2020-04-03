@@ -231,7 +231,6 @@ console.log(Size_t);
 					$('#pts_p').text(Pts_n);
 					$('#count_'+data2.z).text(Cnt[data2.z]);
 				});               
-				$('.guard3').delay(2000).fadeOut(1000);
 
 			}else if(data2.z=='a'){
 				$.when(
@@ -249,7 +248,6 @@ console.log(Size_t);
 					$('#pts_p').text(Pts_n);
 					$('#count_'+data2.z).text(Cnt[data2.z]);
 				});               
-				$('.guard3').delay(2000).fadeOut(1000);
 
 			}else if(data2.z=='b'){
 				$.when(
@@ -267,7 +265,6 @@ console.log(Size_t);
 					$('#pts_p').text(Pts_n);
 					$('#count_'+data2.z).text(Cnt[data2.z]);
 				});               
-				$('.guard3').delay(2000).fadeOut(1000);
 
 			}else if(data2.z=='c'){
 				$.when(
@@ -285,7 +282,6 @@ console.log(Size_t);
 					$('#pts_p').text(Pts_n);
 					$('#count_'+data2.z).text(Cnt[data2.z]);
 				});               
-				$('.guard3').delay(2000).fadeOut(1000);
 
 			}else if(data2.z=='d'){
 				$.when(
@@ -303,7 +299,6 @@ console.log(Size_t);
 					$('#pts_p').text(Pts_n);
 					$('#count_'+data2.z).text(Cnt[data2.z]);
 				});               
-				$('.guard3').delay(2000).fadeOut(1000);
 
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000)
@@ -312,7 +307,7 @@ console.log(Size_t);
 			}
 
 			if(Turn<11){
-				$('.guard3').show();
+				$('.guard3').delay(2000).fadeOut(1000);
 			}
 
 			console.log(data2);
