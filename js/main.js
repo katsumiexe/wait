@@ -48,7 +48,7 @@ if ($(window).width()>619) {
 	var W20="4vw";
 	var W50="10vw";
 	var W110="20vw";
-	var W150="30vw";
+	var W150="29vw";
 
 
 	var Size_t="46vw";
