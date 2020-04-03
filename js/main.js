@@ -21,7 +21,7 @@ var Pts={
 		"p": 0
 };
 
-if (window.matchMedia( "(max-width: 619x)" ).matches) {
+if ($(window).width()>619) {
 	var W10="10px";
 	var W20="20px";
 
@@ -128,6 +128,8 @@ $(function(){
 	});
 
 	$('.turn_start,.turn_start_main').on('click',function(){
+console.log(Size_t);
+
 		$('.guard').hide();
 		$('.guard3').fadeIn(500);
 		$('.player_c').animate({'top':W10},100);
