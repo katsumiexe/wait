@@ -175,24 +175,24 @@ body {
 	position		:absolute;
 	top:0;
 	left:0;
-	height			:30px;
-	line-height		:30px;
-	width			:26px;
-	font-size		:28px;
-	color			:#d0d5ff;
+	height			:35px;
+	line-height		:35px;
+	width			:30px;
+	font-size		:30px;
+	color			:#c0c0ff;
 	z-index			:22;
 }
 .a_ring{
 	font-family		:at_item;
 	display			:inline-block;
 	position		:absolute;
-	top:0;
-	left:30px;
-	height			:30px;
-	line-height		:30px;
-	width			:26px;
-	font-size		:20px;
-	color			:#d0d5ff;
+	top				:0;
+	left			:30px;
+	height			:35px;
+	line-height		:35px;
+	width			:30px;
+	font-size		:26px;
+	color			:#c0c0ff;
 	z-index			:22;
 }
 
@@ -205,18 +205,21 @@ body {
 }
 .td_a{
 	position		:relative;
-    width			:70px;    
-    height			:30px;    
+    width			:70px;
+    height			:35px;
 	text-align		:left;
+	vertical-align	:bottom;
 }
 
 .table_b{
+	box-sizing		:border-box;
 	position		:absolute;
 	bottom			:0;
 	right			:0;
 	border-collapse	:collapse;
     width			:480px;
-    background		:#e0f0ff;
+	height			:120px;
+    background		:#f0e68c;
 }
 
 
@@ -228,7 +231,6 @@ body {
 .td_b2{
 	position		:relative;
 	font-size		:0;
-    height			:85px;    
 }
 
 .guard{
@@ -280,6 +282,7 @@ body {
 	margin			:2px;
 	font-size		:22px;
 	font-family		:at_item;
+	cursor			:pointer;
 }
 
 .p_pts_on{
@@ -304,6 +307,7 @@ body {
 	margin			:2px;
 	border			:1px solid #303030;
 	background		:linear-gradient(135deg,#fafafa,#ffc0e0);
+	cursor			:pointer;
 }
 
 .sel_a{
@@ -312,7 +316,7 @@ body {
 	left			:2px;
 	height			:76px;
 	width			:76px;
-	background:#303030;
+	background		:#303030;
 }
 
 .sel_b{
@@ -649,10 +653,11 @@ body {
 	width			:200px;
 	height			:240px;
 	border			:10px solid #e0f0ff;
-	overflow		:hidden;
+	overflow		:hidden; 
 	border-radius	:20px;
 	background		:#fafafa;
 	z-index			:100;
+	box-shadow:2px 2px 2px rgba(30,30,30,0.5);
 }
 
 .turn_name{
@@ -681,12 +686,14 @@ body {
 	left		:0;
 	right		:0;
 	margin		:auto;
-	width		:180px;
-	padding		:3px;
-	border		:1px solid #fff0e0;
+	width		:160px;
+	height		:55px;
+	padding		:5px;
 	text-align	:left;
 	font-size	:13px;
+	line-height	:20px;
 	background	:rgba(245,245,245,0.8);
+	border:1px solid #303030;
 	z-index		:110;
 }
 
@@ -865,7 +872,7 @@ body {
 .myimg{
 	width			:20vw;
 	height			:20vw;
-	bottom			:10vh;
+	bottom			:11vh;
 }
 
 .a_sub{
@@ -895,16 +902,18 @@ body {
 
 .table_b{
     width			:80vw;
-	bottom			:10vh;
+	bottom			:11vh;
+    height			:20vw;    
 }
 
 .td_b1{
     width			:80vw;
     height			:6vw;    
+	padding-left	:1vw;
+	padding-right	:1vw;
 }
 
 .td_b2{
-    height:14vw;    
 }
 
 .guard{
@@ -914,25 +923,26 @@ body {
 
 .p_name{
     display		:inline-block;
-    width		:27vw;
+    width		:24vw;
 	text-align	:left;
 	font-weight	:600;
 	font-size	:5vw;
 }
 
 .p_status{
-	height			:6vw; 
-	line-height		:6vw;
+	height			:5vw; 
+	line-height		:5vw;
     width			:9vw;
 	border-radius	:1vw;
-	font-size		:3.3vw;
+	font-size		:3.2vw;
 }
 
 .p_pts{
     width		:12vw;
-    height		:6vw;
-	line-height	:6vw;
-	font-size	:3.5vw;
+    height		:5.5vw;
+	line-height	:5.5vw;
+	font-size	:3.2vw;
+	margin		:0.5vw
 }
 
 .set{
