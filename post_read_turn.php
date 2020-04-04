@@ -1,4 +1,6 @@
 <?
+include_once("./library/session.php");
+
 $unit_data[1][0]=2;
 $unit_data[1][1]=3;
 $unit_data[1][2]=7;
@@ -64,6 +66,7 @@ $unit["d"]	=$_POST["unit_d"];
 $unit["p"]	=$_POST["unit_p"];
 
 $card		=$_POST["data_e"];
+$log_id		=$_POST["log_id"];
 
 $p=0;
 arsort($sort);
@@ -119,6 +122,12 @@ if($unit_data[$unit[$win]][0] == $card || $unit_data[$unit[$win]][1] == $card){
 }else{
 	$sort["pts"]=2;
 }
+
+$sql=" UPDATE log_data SET";
+$sql.=" turn_{$turn}='{$sort["pts"]}'";
+$sql.=" WHERE id='{$log_id}'";
+mysqli_query($mysqli,$sql);
+
 
 echo json_encode($sort);
 ?>

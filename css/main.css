@@ -826,6 +826,88 @@ body {
 	z-index:112;
 }
 
+
+.table_res{
+	width:510px;
+	border-collapse	:separate;
+	border-spacing: 5px;
+	background:#fafafa;
+	position:absolute;
+	top:100vh;
+	left:0;
+	right:0;
+	z-index:70;
+}
+
+
+.td_res{
+	height:100px;
+	position:relative;
+	border:1px solid #303030;
+	background:linear-gradient(135deg,#c09060,#8b4513);
+}
+
+.res_a{
+	position	:absolute;
+	top			:0;
+	left		:0;
+	height		:30px;
+	width		:70px;
+	background	:#0000d0;
+}
+
+
+.res_b{
+	position	:absolute;
+	top			:30px;
+	left		:0px;
+	height		:70px;
+	width		:70px;
+	background	:#303030;
+}
+
+
+.res_c{
+	position	:absolute;
+	top			:5px;
+	left		:75px;
+	height		:90px;
+	width		:90px;
+	background	:#ff3030;
+}
+
+.res_d{
+	position	:absolute;
+	top			:5px;
+	left		:170px;
+	height		:30px;
+	width		:230px;
+	background	:#8b4513;
+	box-shadow:3px 3px 5px 5px rgba(30,30,30,0.3) inset;
+}
+
+.res_e{
+	position	:absolute;
+	top			:40px;
+	left		:170px;
+	height		:55px;
+	width		:230px;
+	background	:#8b4513;
+	box-shadow:3px 3px 5px 5px rgba(30,30,30,0.3) inset;
+}
+
+.res_f{
+	position	:absolute;
+	top			:5px;
+	left		:405px;
+	height		:90px;
+	width		:90px;
+	background	:#8b4513;
+	box-shadow:3px 3px 5px 5px rgba(30,30,30,0.3) inset;
+}
+
+
+
 /*-------------------------------------------------------------------*/
 @media (max-width: 619px) {
 .main{
