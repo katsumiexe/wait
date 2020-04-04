@@ -132,7 +132,7 @@ console.log(Size_t);
 
 		$('.guard').hide();
 		$('.guard3').fadeIn(500);
-		$('.player_c').animate({'top':W10},100);
+		$('.player_c').animate({'top':W110},100);
 		$('.player_e').slideUp(100).animate({'top':W10},0);		
 		$('.turn_count').text(Turn+1);
 
@@ -215,10 +215,12 @@ console.log(Size_t);
 			$('#count_'+data2.z).text(Tmp);
 			console.log("Z" + data2.z);
 */
+
+
 			if(data2.z=='p'){
 				$.when(
 			 		$('.main_card').delay(2000)
-					.animate({'top':'90vh','right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.stop(false, true).animate({'top':'90vh','right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -235,7 +237,7 @@ console.log(Size_t);
 			}else if(data2.z=='a'){
 				$.when(
 					$('.main_card').delay(2000)
-					.animate({'top':W50,'right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.stop(false, true).animate({'top':W50,'right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -252,7 +254,7 @@ console.log(Size_t);
 			}else if(data2.z=='b'){
 				$.when(
 					$('.main_card').delay(2000)
-					.animate({'top':W50,'right':W420,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.stop(false, true).animate({'top':W50,'right':W420,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -269,7 +271,7 @@ console.log(Size_t);
 			}else if(data2.z=='c'){
 				$.when(
 					$('.main_card').delay(2000)
-					.animate({'top':W50,'right':W300,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.stop(false, true).animate({'top':W50,'right':W300,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -286,7 +288,7 @@ console.log(Size_t);
 			}else if(data2.z=='d'){
 				$.when(
 					$('.main_card').delay(2000)
-					.animate({'top':W50,'right':W180,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.stop(false, true).animate({'top':W50,'right':W180,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -302,13 +304,23 @@ console.log(Size_t);
 
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000)
-				.animate({'right':W700},800).fadeOut(0)
+				.stop(false, true).animate({'right':W700},800).fadeOut(0)
 				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 			}
 
 			if(Turn<11){
 				$('.guard3').delay(2000).fadeOut(1000);
+
+			}else{
 			}
+				$('.player_c').stop(false, true).delay(2800).animate({'top':W110},100);
+
+				$('.pl2').stop(false, true).delay(3500).animate({'left':0},200);
+				$('.pl3').stop(false, true).delay(3600).animate({'left':0},400);
+				$('.pl4').stop(false, true).delay(3800).animate({'left':0},600);
+				$('.pl5').stop(false, true).delay(3500).fadeOut(500);
+
+
 
 			console.log(data2);
 			console.log(Turn);

@@ -367,8 +367,8 @@ body {
 }
 
 .player{
-	display		:flex;
-	flex-wrap	:nowrap;
+	display		:block;
+	position	:relative;
 	width		:600px;
 	height		:150px;
 	background	:#f0f0f0;
@@ -378,9 +378,10 @@ body {
 
 .player_0{
 	display		:inline-block;
+	position	:absolute;
+	top			:0;
 	height		:150px;
-	flex		:1;
-	position	:relative;
+	width		:120px;
 	border		:1px solid #303030;
 }
 
@@ -392,7 +393,6 @@ body {
 	margin		:auto;
 	height		:100px;
 	width		:100px;
-	z-index		:21;
 }
 
 .player_b{
@@ -403,7 +403,6 @@ body {
 	width		:100px;
 	height		:39px;
 	margin		:auto;
-	z-index		:22;
 }
 
 .player_c{
@@ -417,7 +416,6 @@ body {
 	margin		:auto;
 	background	:#008000;
 	font-family	:at_item;
-	z-index		:11;
 	color		:#fafafa;
 	font-size	:24px;
 }
@@ -430,7 +428,6 @@ body {
 	height		:28px;
 	line-height	:28px;
 	background	:linear-gradient(#3030ff,#0000d0);
-	z-index		:23;
 	color		:#fafafa;
 	font-size	:20px;
 	text-align	:center;
@@ -448,7 +445,6 @@ body {
 	height		:345px;
 	margin		:auto;
 	background	:#e0d000;
-	z-index		:10;
 	color		:#fafafa;
 	font-size	:24px;
 }
@@ -467,24 +463,50 @@ body {
 	font-family	:at_item;
 	font-size	:20px;
 }
+
+.pc1{
+	background	:#ffe0d0;
+}
+
+.pc2{
+	background:#e0ffd0;
+}
+
+.pc3{
+	background:#ffd0e0;
+}
+
+.pc4{
+	background:#e0e0ff;
+}
+
+.pc5{
+	background:#cccccc;
+}
+
 .pl1{
-	background:#ffe0d0;
+	background	:#ffe0d0;
+	left		:0;
 }
 
 .pl2{
 	background:#e0ffd0;
+	left		:120px;
 }
 
 .pl3{
 	background:#ffd0e0;
+	left		:240px;
 }
 
 .pl4{
 	background:#e0e0ff;
+	left		:360px;
 }
 
 .pl5{
 	background:#cccccc;
+	left		:480px;
 }
 
 
@@ -538,7 +560,6 @@ body {
 	width			:25px;
 	font-size		:25px;
 	color			:#f0f0f0;	
-	z-index			:22;
 }
 
 .get_ring{
@@ -552,7 +573,6 @@ body {
 	width			:25px;
 	font-size		:20px;
 	color			:#f0f0f0;	
-	z-index			:22;
 }
 
 .get_icon{
