@@ -32,7 +32,7 @@ body {
     max-width:600px;
     background:#f0f0f0;
     margin:0 auto;    
-	height:95vh;
+	height:100vh;
 }
 
 .page_01{
@@ -155,7 +155,7 @@ body {
 	position	:absolute;
 	height		:100vh;
 	display		:none;
-	oveflow		:hidden;
+	overflow	:hidden;
 }
 
 

@@ -220,7 +220,7 @@ console.log(Size_t);
 			if(data2.z=='p'){
 				$.when(
 			 		$('.main_card').delay(2000)
-					.stop(false, true).animate({'top':'90vh','right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.animate({'top':'90vh','right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -237,7 +237,7 @@ console.log(Size_t);
 			}else if(data2.z=='a'){
 				$.when(
 					$('.main_card').delay(2000)
-					.stop(false, true).animate({'top':W50,'right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.animate({'top':W50,'right':W540,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -254,7 +254,7 @@ console.log(Size_t);
 			}else if(data2.z=='b'){
 				$.when(
 					$('.main_card').delay(2000)
-					.stop(false, true).animate({'top':W50,'right':W420,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.animate({'top':W50,'right':W420,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -271,7 +271,7 @@ console.log(Size_t);
 			}else if(data2.z=='c'){
 				$.when(
 					$('.main_card').delay(2000)
-					.stop(false, true).animate({'top':W50,'right':W300,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.animate({'top':W50,'right':W300,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -288,7 +288,7 @@ console.log(Size_t);
 			}else if(data2.z=='d'){
 				$.when(
 					$('.main_card').delay(2000)
-					.stop(false, true).animate({'top':W50,'right':W180,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
+					.animate({'top':W50,'right':W180,'height':'0','width':'0','border-width':'0px','border-radius':'20px'},300).fadeOut(0)
 					.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0)
 		         ).done(function(){
 					if(data2.ring==2){
@@ -304,7 +304,7 @@ console.log(Size_t);
 
 			}else if(data2.z=='l'){
 				$('.main_card').delay(2000)
-				.stop(false, true).animate({'right':W700},800).fadeOut(0)
+				.animate({'right':W700},800).fadeOut(0)
 				.animate({'top':Size_t,'right':Size_r,'height':Size_h,'width':Size_w,'border-width':'10px','border-radius':'20px'},0);
 			}
 
@@ -315,11 +315,13 @@ console.log(Size_t);
 			}
 				$('.player_c').stop(false, true).delay(2800).animate({'top':W110},100);
 
-				$('.pl2').stop(false, true).delay(3500).animate({'left':0},200);
-				$('.pl3').stop(false, true).delay(3600).animate({'left':0},400);
-				$('.pl4').stop(false, true).delay(3800).animate({'left':0},600);
-				$('.pl5').stop(false, true).delay(3500).fadeOut(500);
+				$('.pl1').delay(4500).animate({'top':'100vh'},500);
+				$('.pl2').delay(3500).animate({'left':0},200).delay(1000).animate({'top':'100vh'},500);
+				$('.pl3').delay(3600).animate({'left':0},400).delay(900).animate({'top':'100vh'},500);
+				$('.pl4').delay(3800).animate({'left':0},600).delay(700).animate({'top':'100vh'},500);
+				$('.pl5').delay(3500).fadeOut(500);
 
+				$('.table_a,.table_b,.myimg').delay(4700).animate({'top':'100vh'},500);
 
 
 			console.log(data2);
