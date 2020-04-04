@@ -1174,9 +1174,11 @@ body {
 
 .turn_comm{
 	bottom		:1vw;
-	width		:44vw;
+	width		:40vw;
 	padding		:1vw;
 	font-size	:3vw;
+	height		:13vw
+	line-height	:4vw
 }
 
 .turn_pta{
